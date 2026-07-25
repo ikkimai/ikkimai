@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" fill="none">
+  <defs>
+    <style>
+
+    .city-header { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 18px; font-weight: 700; fill: #f8fafc; letter-spacing: 2px; }
+    .city-sub { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; fill: #64748b; letter-spacing: 1px; }
+    .bldg-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 13px; font-weight: 700; fill: #f8fafc; text-anchor: middle; }
+    .bldg-stats { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 10px; fill: #94a3b8; text-anchor: middle; }
+    .bldg-type { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 10px; font-weight: 600; fill: #38bdf8; text-anchor: middle; }
+    .billboard-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 8px; font-weight: 700; fill: #38bdf8; text-anchor: middle; }
+    
+    @keyframes windowTwinkle {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 0.15; }
+    }
+    @keyframes beaconPulse {
+      0%, 100% { r: 3px; opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      50% { r: 5px; opacity: 0.4; filter: drop-shadow(0 0 12px #38bdf8); }
+    }
+    @keyframes stealthShield {
+      0%, 100% { stroke-opacity: 0.6; stroke-dashoffset: 0; }
+      50% { stroke-opacity: 0.2; stroke-dashoffset: 30; }
+    }
+    @keyframes droneFly {
+      0% { transform: translateX(-100px); }
+      100% { transform: translateX(900px); }
+    }
+    @keyframes droneFlyRev {
+      0% { transform: translateX(900px); }
+      100% { transform: translateX(-100px); }
+    }
+    
+    .twinkle-1 { animation: windowTwinkle 3.2s infinite ease-in-out; }
+    .twinkle-2 { animation: windowTwinkle 4.5s infinite ease-in-out 1s; }
+    .twinkle-3 { animation: windowTwinkle 3.8s infinite ease-in-out 2s; }
+    .beacon { animation: beaconPulse 1.6s infinite ease-in-out; }
+    .stealth-field { stroke-dasharray: 8 12; animation: stealthShield 3.5s infinite linear; }
+    .drone-1 { animation: droneFly 18s linear infinite; }
+    .drone-2 { animation: droneFlyRev 24s linear infinite 5s; }
+  
+    </style>
+    
+      <filter id="city-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7.2" result="blur2" />
+        <feMerge>
+          <feMergeNode in="blur2" />
+          <feMergeNode in="blur1" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    
+    
+      <filter id="stealth-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur2" />
+        <feMerge>
+          <feMergeNode in="blur2" />
+          <feMergeNode in="blur1" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    
+    
+      <filter id="city-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#000000" flood-opacity="0.45" />
+      </filter>
+    
+    
+      <pattern id="city-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+      </pattern>
+    
+    
+      <linearGradient id="city-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0b1120" />
+        <stop offset="100%" stop-color="#040711" />
+      </linearGradient>
+    
+  </defs>
+  <rect x="10" y="10" width="780" height="440" rx="16" fill="#000000" fill-opacity="0.4" filter="url(#city-shadow)" />
+  <rect x="10" y="10" width="780" height="440" rx="16" fill="url(#city-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <path d="M 26 11 L 774 11" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85" />
+  <rect x="10" y="10" width="780" height="440" fill="url(#city-grid)" rx="16" />
+  <text x="38" y="44" class="city-header">CREATIVE CITY // AUTONOMOUS SKYLINE</text>
+  <text x="38" y="62" class="city-sub">LIVE REPOSITORY ARCHITECTURE MATRIX</text>
+  <line x1="20" y1="365" x2="780" y2="365" stroke="#334155" stroke-width="1.5" />
+  <g class="drone-1">
+    <line x1="0" y1="85" x2="24" y2="85" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="12" cy="85" r="2.5" fill="#f43f5e" />
+    <text x="32" y="88" font-family="'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace" font-size="8px" fill="#64748b">DRONE-01 [TELEMETRY PACKET]</text>
+  </g>
+  <g class="drone-2">
+    <line x1="0" y1="130" x2="20" y2="130" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="10" cy="130" r="2" fill="#10b981" />
+  </g>
+  <rect x="45" y="220" width="50" height="145" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="125" y="170" width="65" height="195" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="235" y="225" width="55" height="140" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="345" y="145" width="75" height="220" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="460" y="195" width="60" height="170" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="575" y="160" width="70" height="205" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <rect x="685" y="210" width="55" height="155" fill="#0c1324" stroke="#162036" stroke-width="1" />
+  <g ><rect x="72" y="230" width="64" height="135" fill="#0d162a" stroke="#FF007F" stroke-width="1.6" rx="2" /><rect x="80" y="135.5" width="48" height="94.5" fill="#0f1a30" stroke="#FF007F" stroke-width="1.6" rx="2" /><rect x="90" y="95" width="28" height="40.5" fill="#111f38" stroke="#FF007F" stroke-width="1.6" rx="1" /><line x1="104" y1="95" x2="104" y2="69" stroke="#FF007F" stroke-width="1.6" /><circle cx="104" cy="69" r="3" fill="#FF007F" class="beacon" />
+        <rect x="68" y="81" width="72" height="13" fill="#080e1a" stroke="#FF007F" stroke-width="1" rx="3" fill-opacity="0.95" />
+        <text x="104" y="90" class="billboard-text" fill="#FF007F">564 COMMITS</text>
+      <rect x="84" y="133" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="95" y="133" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="106" y="133" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="117" y="133" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="84" y="149" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="95" y="149" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="106" y="149" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="117" y="149" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="84" y="165" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="95" y="165" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="106" y="165" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="117" y="165" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="84" y="181" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="95" y="181" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="106" y="181" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="117" y="181" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="84" y="197" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="95" y="197" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="106" y="197" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="117" y="197" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="84" y="213" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="95" y="213" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="106" y="213" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="117" y="213" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="84" y="229" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="95" y="229" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="106" y="229" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="117" y="229" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="84" y="245" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="95" y="245" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="106" y="245" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="117" y="245" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="84" y="261" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="95" y="261" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="106" y="261" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="117" y="261" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="84" y="277" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="95" y="277" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="106" y="277" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="117" y="277" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="84" y="293" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="95" y="293" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="106" y="293" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="117" y="293" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="84" y="309" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="95" y="309" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="106" y="309" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="117" y="309" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="84" y="325" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="95" y="325" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="106" y="325" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="117" y="325" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="84" y="341" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="95" y="341" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="106" y="341" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="117" y="341" width="6" height="9" fill="#FF007F" fill-opacity="0.75" rx="1.5" class="twinkle-2" />
+      <line x1="77" y1="370" x2="131" y2="370" stroke="#FF007F" stroke-width="1.5" stroke-opacity="0.4" />
+      <line x1="84" y1="376" x2="124" y2="376" stroke="#FF007F" stroke-width="1" stroke-opacity="0.2" />
+    
+      <g transform="translate(0, 0)">
+        <text x="104" y="389" class="bldg-name" fill="#f8fafc">Creative Mind</text>
+        <text x="104" y="403" class="bldg-type" fill="#FF007F">Core Neural OS</text>
+        <text x="104" y="417" class="bldg-stats">564 commits</text>
+      </g>
+    </g>
+  <g ><rect x="224" y="183" width="56" height="182" fill="#0d162a" stroke="#00E5FF" stroke-width="1.6" rx="2" /><polygon points="224,183 280,183 252,155" fill="#111f38" stroke="#00E5FF" stroke-width="1.6" /><line x1="252" y1="155" x2="252" y2="129" stroke="#00E5FF" stroke-width="1.6" /><circle cx="252" cy="129" r="3" fill="#00E5FF" class="beacon" />
+        <rect x="216" y="141" width="72" height="13" fill="#080e1a" stroke="#00E5FF" stroke-width="1" rx="3" fill-opacity="0.95" />
+        <text x="252" y="150" class="billboard-text" fill="#00E5FF">380 COMMITS</text>
+      <rect x="237.5" y="193" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="248.5" y="193" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="259.5" y="193" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="237.5" y="209" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="248.5" y="209" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="259.5" y="209" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="237.5" y="225" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="248.5" y="225" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="259.5" y="225" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="237.5" y="241" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="248.5" y="241" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="259.5" y="241" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="237.5" y="257" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="248.5" y="257" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="259.5" y="257" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="237.5" y="273" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="248.5" y="273" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="259.5" y="273" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="237.5" y="289" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="248.5" y="289" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="259.5" y="289" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="237.5" y="305" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="248.5" y="305" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="259.5" y="305" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="237.5" y="321" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="248.5" y="321" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="259.5" y="321" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="237.5" y="337" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="248.5" y="337" width="6" height="9" fill="#00E5FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="259.5" y="337" width="6" height="9" fill="#14213d" rx="1.5" />
+      <line x1="229" y1="370" x2="275" y2="370" stroke="#00E5FF" stroke-width="1.5" stroke-opacity="0.4" />
+      <line x1="236" y1="376" x2="268" y2="376" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.2" />
+    
+      <g transform="translate(0, 0)">
+        <text x="252" y="389" class="bldg-name" fill="#f8fafc">BulkUp</text>
+        <text x="252" y="403" class="bldg-type" fill="#00E5FF">Fitness Architecture</text>
+        <text x="252" y="417" class="bldg-stats">380 commits</text>
+      </g>
+    </g>
+  <g ><rect x="376" y="209" width="48" height="156" fill="#0d162a" stroke="#A259FF" stroke-width="1.6" rx="2" /><path d="M 380 209 A 20 20 0 0 1 420 209 Z" fill="#111f38" stroke="#A259FF" stroke-width="1.6" /><line x1="400" y1="185" x2="400" y2="159" stroke="#A259FF" stroke-width="1.6" /><circle cx="400" cy="159" r="3" fill="#A259FF" class="beacon" />
+        <rect x="364" y="171" width="72" height="13" fill="#080e1a" stroke="#A259FF" stroke-width="1" rx="3" fill-opacity="0.95" />
+        <text x="400" y="180" class="billboard-text" fill="#A259FF">290 COMMITS</text>
+      <rect x="391" y="223" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="402" y="223" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="391" y="239" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="402" y="239" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="391" y="255" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="402" y="255" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="391" y="271" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="402" y="271" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="391" y="287" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="402" y="287" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="391" y="303" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="402" y="303" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="391" y="319" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="402" y="319" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="391" y="335" width="6" height="9" fill="#A259FF" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="402" y="335" width="6" height="9" fill="#14213d" rx="1.5" />
+      <line x1="381" y1="370" x2="419" y2="370" stroke="#A259FF" stroke-width="1.5" stroke-opacity="0.4" />
+      <line x1="388" y1="376" x2="412" y2="376" stroke="#A259FF" stroke-width="1" stroke-opacity="0.2" />
+    
+      <g transform="translate(0, 0)">
+        <text x="400" y="389" class="bldg-name" fill="#f8fafc">AI Lab</text>
+        <text x="400" y="403" class="bldg-type" fill="#A259FF">Neural R&D Facility</text>
+        <text x="400" y="417" class="bldg-stats">290 commits</text>
+      </g>
+    </g>
+  <g ><path d="M 523 365 L 523 243 L 560.5 225 L 573 225 L 573 365 Z" fill="#0d162a" stroke="#FFD43B" stroke-width="1.6" /><line x1="548" y1="225" x2="548" y2="199" stroke="#FFD43B" stroke-width="1.6" /><circle cx="548" cy="199" r="3" fill="#FFD43B" class="beacon" />
+        <rect x="512" y="211" width="72" height="13" fill="#080e1a" stroke="#FFD43B" stroke-width="1" rx="3" fill-opacity="0.95" />
+        <text x="548" y="220" class="billboard-text" fill="#FFD43B">190 COMMITS</text>
+      <rect x="533.5" y="263" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="544.5" y="263" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="555.5" y="263" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="533.5" y="279" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="544.5" y="279" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="555.5" y="279" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="533.5" y="295" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="544.5" y="295" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="555.5" y="295" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="533.5" y="311" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="544.5" y="311" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="555.5" y="311" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="533.5" y="327" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="544.5" y="327" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="555.5" y="327" width="6" height="9" fill="#FFD43B" fill-opacity="0.75" rx="1.5" class="twinkle-1" />
+      <line x1="528" y1="370" x2="568" y2="370" stroke="#FFD43B" stroke-width="1.5" stroke-opacity="0.4" />
+      <line x1="535" y1="376" x2="561" y2="376" stroke="#FFD43B" stroke-width="1" stroke-opacity="0.2" />
+    
+      <g transform="translate(0, 0)">
+        <text x="548" y="389" class="bldg-name" fill="#f8fafc">Portfolio</text>
+        <text x="548" y="403" class="bldg-type" fill="#FFD43B">Interactive Showcase</text>
+        <text x="548" y="417" class="bldg-stats">190 commits</text>
+      </g>
+    </g>
+  <g ><rect x="674" y="310" width="44" height="55" fill="#0d162a" stroke="#00E676" stroke-width="1.6" rx="2" /><rect x="679.5" y="271.5" width="33" height="38.5" fill="#0f1a30" stroke="#00E676" stroke-width="1.6" rx="2" /><rect x="686.5" y="255" width="19" height="16.5" fill="#111f38" stroke="#00E676" stroke-width="1.6" rx="1" /><line x1="696" y1="255" x2="696" y2="229" stroke="#00E676" stroke-width="1.6" /><circle cx="696" cy="229" r="3" fill="#00E676" class="beacon" />
+        <rect x="660" y="241" width="72" height="13" fill="#080e1a" stroke="#00E676" stroke-width="1" rx="3" fill-opacity="0.95" />
+        <text x="696" y="250" class="billboard-text" fill="#00E676">120 COMMITS</text>
+      <rect x="687" y="293" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="698" y="293" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="687" y="309" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-2" /><rect x="698" y="309" width="6" height="9" fill="#14213d" rx="1.5" /><rect x="687" y="325" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-3" /><rect x="698" y="325" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="687" y="341" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-1" /><rect x="698" y="341" width="6" height="9" fill="#00E676" fill-opacity="0.75" rx="1.5" class="twinkle-2" />
+      <line x1="679" y1="370" x2="713" y2="370" stroke="#00E676" stroke-width="1.5" stroke-opacity="0.4" />
+      <line x1="686" y1="376" x2="706" y2="376" stroke="#00E676" stroke-width="1" stroke-opacity="0.2" />
+    
+      <g transform="translate(0, 0)">
+        <text x="696" y="389" class="bldg-name" fill="#f8fafc">Automations</text>
+        <text x="696" y="403" class="bldg-type" fill="#00E676">CI/CD Grid & Workers</text>
+        <text x="696" y="417" class="bldg-stats">120 commits</text>
+      </g>
+    </g>
+</svg>

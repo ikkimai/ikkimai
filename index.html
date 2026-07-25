@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Mind OS // Engine Simulator</title>
+  <style>
+    :root {
+      --bg: #030305;
+      --text: #ffffff;
+      --font-ui: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo { font-size: 14px; font-weight: 600; letter-spacing: 2px; }
+    .btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: rgba(255,255,255,0.1); }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      overflow: auto;
+    }
+    .dashboard-container {
+      width: 1440px;
+      height: 900px;
+      background: #000;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dashboard-container img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .status-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 13px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+    .status-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CREATIVE MIND OS // PREVIEW</div>
+    <div style="display: flex; gap: 1rem;">
+      <button class="btn" onclick="rebuildEngine()">⟳ Rebuild Engine</button>
+      <button class="btn" onclick="simulateCommit()" style="background: #3b82f6; border-color: #3b82f6;">Simulate Activity</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="dashboard-container">
+      <img src="assets/creative_mind_dashboard.svg" alt="Master Dashboard" id="master-svg" />
+    </div>
+  </main>
+
+  <div class="status-toast" id="toast">Update Successful</div>
+
+  <script>
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.innerText = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 3000);
+    }
+
+    function refreshImage() {
+      const img = document.getElementById("master-svg");
+      img.src = `assets/creative_mind_dashboard.svg?t=${Date.now()}`;
+    }
+
+    async function rebuildEngine() {
+      try {
+        const res = await fetch("/api/rebuild", { method: "POST" });
+        if (res.ok) {
+          refreshImage();
+          showToast("Dashboard Recompiled");
+        }
+      } catch (e) {
+        showToast("Error recompiling");
+      }
+    }
+
+    async function simulateCommit() {
+      try {
+        const res = await fetch("/api/simulate-commit", { method: "POST" });
+        if (res.ok) {
+          refreshImage();
+          showToast("Activity Simulated");
+        }
+      } catch (e) {
+        showToast("Error simulating");
+      }
+    }
+  </script>
+</body>
+</html>

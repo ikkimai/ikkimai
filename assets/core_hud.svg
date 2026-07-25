@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180" width="800" height="180" fill="none">
+  <defs>
+    <style>
+
+    .hud-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; font-size: 24px; font-weight: 600; fill: #ffffff; letter-spacing: -0.5px; }
+    .hud-subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 400; fill: #888888; }
+    
+    .metric-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; font-size: 22px; font-weight: 600; fill: #ffffff; letter-spacing: -0.5px; }
+    .metric-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; font-size: 11px; font-weight: 500; fill: #666666; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .avatar-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; font-size: 28px; font-weight: 500; fill: #ffffff; }
+  
+    </style>
+    
+      <linearGradient id="premium-border" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.15)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,0.03)" />
+      </linearGradient>
+    
+    
+      <radialGradient id="glow-accent" cx="0%" cy="0%" r="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+      </radialGradient>
+    
+  </defs>
+  <rect x="0" y="0" width="800" height="180" fill="transparent" />
+  <rect x="20" y="20" width="760" height="140" fill="#0A0A0A" rx="16" />
+  <rect x="20" y="20" width="760" height="140" fill="url(#glow-accent)" rx="16" style="mix-blend-mode: screen;" />
+  <rect x="20" y="20" width="760" height="140" fill="none" stroke="url(#premium-border)" stroke-width="1" rx="16" />
+  <circle cx="80" cy="90" r="36" fill="#111111" stroke="#222222" stroke-width="1" />
+  <text x="80" y="99" class="avatar-text" text-anchor="middle">N</text>
+  <text x="140" y="82" class="hud-title">Nicolas (Creative Mind)</text>
+  <text x="140" y="106" class="hud-subtitle">Architecting the Creative Mind OS & Next-Gen Digital Products.</text>
+  <g >
+      <text x="480" y="74" class="metric-label">Total Commits</text>
+      <text x="480" y="100" class="metric-val">1544</text>
+    </g>
+  <g >
+      <text x="590" y="74" class="metric-label">Public Repos</text>
+      <text x="590" y="100" class="metric-val">28</text>
+    </g>
+  <g >
+      <text x="700" y="74" class="metric-label">Total Stars</text>
+      <text x="700" y="100" class="metric-val">342</text>
+    </g>
+  <rect x="560" y="70" width="1" height="32" fill="#222222" />
+  <rect x="670" y="70" width="1" height="32" fill="#222222" />
+</svg>

@@ -1,0 +1,54 @@
+name: Creative Mind OS // Automated Profile & Skyline Generator
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # Runs automatically every 12 hours
+  workflow_dispatch:        # Allows manual trigger via GitHub Actions UI
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "api/**"
+      - "scripts/**"
+
+jobs:
+  update-os:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository Matrix
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js Kernel
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+
+      - name: Synchronize Live GitHub Metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+        run: |
+          node scripts/fetchStats.js
+
+      - name: Execute Vector Graphics Engine Build
+        run: |
+          node scripts/build.js
+
+      - name: Commit & Deploy Updated Skyline Matrix
+        run: |
+          git config --global user.name "Creative-Mind-OS-Bot"
+          git config --global user.email "bot@creativemind.os"
+          git add assets/*.svg README.md api/*.json
+          if git diff --staged --quiet; then
+            echo "::notice::No changes in vector graphics output or metrics. System Stable."
+          else
+            git commit -m "⚡ Creative Mind OS: Auto-Rebuild Profile Skyline & Metrics [skip ci]"
+            git push
+            echo "::notice::Successfully deployed new Creative Mind OS profile state!"
+          fi

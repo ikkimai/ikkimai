@@ -1,0 +1,37 @@
+[
+  {
+    "version": "Creative Mind OS 1.0",
+    "status": "CURRENT RELEASE",
+    "description": "Automated SVG Vector Graphics Engine & Cyberpunk Neural Dashboard on GitHub.",
+    "date": "2026-Q3",
+    "completed": true
+  },
+  {
+    "version": "Creative Mind OS 2.0",
+    "status": "UPCOMING",
+    "description": "Interactive WebGL sidecar integration with real-time 3D planetary physics & soundscape.",
+    "date": "2026-Q4",
+    "completed": false
+  },
+  {
+    "version": "Creative Mind Enterprise",
+    "status": "ROADMAP",
+    "description": "Team & organization-wide OS dashboard deployment with multi-user developer cityscapes.",
+    "date": "2027-H1",
+    "completed": false
+  },
+  {
+    "version": "Creative Mind AI",
+    "status": "FUTURE VISION",
+    "description": "Deep autonomous code review, architecture generation, and dynamic live-coding avatar.",
+    "date": "2027-H2",
+    "completed": false
+  },
+  {
+    "version": "Creative Mind Cloud",
+    "status": "HORIZON",
+    "description": "Decentralized cloud workspace environment embedded directly across distributed repositories.",
+    "date": "2028+",
+    "completed": false
+  }
+]

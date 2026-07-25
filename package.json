@@ -1,0 +1,22 @@
+{
+  "name": "creative-mind-os",
+  "version": "1.0.0",
+  "description": "Creative Mind OS: The GitHub Profile that behaves like an Operating System. Powered by a custom Node.js vector graphics engine.",
+  "main": "scripts/build.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "fetch": "node scripts/fetchStats.js",
+    "dev": "node scripts/server.js",
+    "test": "node scripts/build.js && echo 'Build verification passed!'"
+  },
+  "keywords": [
+    "github-profile",
+    "svg-engine",
+    "cyberpunk",
+    "operating-system",
+    "automation"
+  ],
+  "author": "Nicolas (Creative Mind)",
+  "license": "MIT"
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240" fill="none">
+  <defs>
+    <style>
+
+    .plant-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 18px; font-weight: 700; fill: #f8fafc; letter-spacing: 2px; }
+    .plant-sub { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; fill: #64748b; letter-spacing: 1px; }
+    .label-code { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; font-weight: 700; fill: #94a3b8; letter-spacing: 1px; }
+    .val-code { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 26px; font-weight: 800; fill: #f8fafc; }
+    .status-badge { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; font-weight: 700; fill: #10b981; }
+    .overdrive-badge { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; font-weight: 700; fill: #f43f5e; }
+    
+    @keyframes plasmaFlow {
+      0% { stroke-dashoffset: 100; opacity: 0.7; }
+      50% { opacity: 1; stroke-width: 3px; }
+      100% { stroke-dashoffset: 0; opacity: 0.7; }
+    }
+    @keyframes lightningFlash {
+      0%, 90%, 100% { opacity: 0.1; stroke-width: 1px; }
+      92%, 96% { opacity: 1; stroke-width: 3px; filter: drop-shadow(0 0 10px #f43f5e); }
+    }
+    @keyframes turbineSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .plasma-line { stroke-dasharray: 12 12; animation: plasmaFlow 2.8s linear infinite; }
+    .lightning-bolt { animation: lightningFlash 2.5s infinite ease-in-out; }
+    .turbine { transform-origin: 130px 130px; animation: turbineSpin 7s linear infinite; }
+  
+    </style>
+    
+      <filter id="energy-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7.2" result="blur2" />
+        <feMerge>
+          <feMergeNode in="blur2" />
+          <feMergeNode in="blur1" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    
+    
+      <filter id="lightning-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur2" />
+        <feMerge>
+          <feMergeNode in="blur2" />
+          <feMergeNode in="blur1" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    
+    
+      <filter id="energy-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="6" stdDeviation="18" flood-color="#000000" flood-opacity="0.45" />
+      </filter>
+    
+    
+      <pattern id="energy-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+        <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+      </pattern>
+    
+    
+      <linearGradient id="energy-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0b1120" />
+        <stop offset="100%" stop-color="#040711" />
+      </linearGradient>
+    
+  </defs>
+  <rect x="10" y="10" width="780" height="220" rx="16" fill="#000000" fill-opacity="0.4" filter="url(#energy-shadow)" />
+  <rect x="10" y="10" width="780" height="220" rx="16" fill="url(#energy-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <path d="M 26 11 L 774 11" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85" />
+  <rect x="10" y="10" width="780" height="220" fill="url(#energy-grid)" rx="16" />
+  <text x="38" y="44" class="plant-title">COMMIT ENERGY PLANT // HIGH-VOLTAGE POWER REACTOR</text>
+  <text x="38" y="62" class="plant-sub">CONVERTING CONTRIBUTIONS INTO CLEAN DIGITAL MEGAWATTS</text>
+  <g >
+    <circle cx="130" cy="130" r="52" stroke="#334155" stroke-width="2" fill="#0f172a" />
+    <circle cx="130" cy="130" r="44" stroke="#10b981" stroke-width="2" stroke-dasharray="10 10" fill="none" class="turbine" />
+    <circle cx="130" cy="130" r="30" stroke="#38bdf8" stroke-width="2" stroke-dasharray="18 14" fill="none" class="turbine" style="animation-direction: reverse;" />
+    <circle cx="130" cy="130" r="14" fill="#10b981" filter="url(#energy-glow)" />
+    <!-- High-voltage discharge vector inside core -->
+    <path d="M 124 112 L 134 126 L 126 132 L 136 148" stroke="#f43f5e" stroke-width="2" fill="none" class="lightning-bolt" />
+  </g>
+  <line x1="182" y1="130" x2="250" y2="130" stroke="#10b981" stroke-width="2.5" class="plasma-line" />
+  <circle cx="250" cy="130" r="4" fill="#10b981" />
+  <text x="270" y="90" class="label-code">ENERGY PRODUCTION LEVEL</text>
+  <text x="270" y="118" class="val-code">1544 COMMITS = 85.7 MW OUTPUT</text>
+  <g ><rect x="270" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="290" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="310" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="330" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="350" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="370" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="390" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="410" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="430" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="450" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="470" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="490" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="510" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="530" y="134" width="16" height="32" fill="#10b981" rx="3" /><rect x="550" y="134" width="16" height="32" fill="#fbbf24" rx="3" /><rect x="570" y="134" width="16" height="32" fill="#fbbf24" rx="3" /><rect x="590" y="134" width="16" height="32" fill="#fbbf24" rx="3" /><rect x="610" y="134" width="16" height="32" fill="#fbbf24" rx="3" /><rect x="630" y="134" width="16" height="32" fill="#1e293b" rx="3" /><rect x="650" y="134" width="16" height="32" fill="#1e293b" rx="3" /><rect x="670" y="134" width="16" height="32" fill="#1e293b" rx="3" /><rect x="690" y="134" width="16" height="32" fill="#1e293b" rx="3" /><rect x="710" y="134" width="16" height="32" fill="#1e293b" rx="3" /><rect x="730" y="134" width="16" height="32" fill="#1e293b" rx="3" /></g>
+  <rect x="270" y="182" width="480" height="26" fill="#0f172a" stroke="#334155" rx="6" />
+  <circle cx="286" cy="195" r="4.5" fill="#f43f5e" />
+  <text x="302" y="199" class="overdrive-badge">⚡ SYSTEM OVERDRIVE ACTIVE // TURBINE RPM: 12,400 // REACTIVITY 99.9%</text>
+</svg>

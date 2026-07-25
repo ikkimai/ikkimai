@@ -1,0 +1,59 @@
+{
+  "user": {
+    "login": "nicolas",
+    "name": "Nicolas Raspal",
+    "bio": "Software Engineer & Designer",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6000?v=4"
+  },
+  "stats": {
+    "total_commits": 1640,
+    "public_repos": 8,
+    "private_repos_secured": 0,
+    "stars_received": 3,
+    "power_output_mw": null
+  },
+  "languages": [
+    {
+      "name": "Python",
+      "count": 2,
+      "rawPct": 33.33333333333333,
+      "pct": "33%",
+      "w": 67
+    },
+    {
+      "name": "Jupyter Notebook",
+      "count": 2,
+      "rawPct": 33.33333333333333,
+      "pct": "33%",
+      "w": 67
+    },
+    {
+      "name": "Ruby",
+      "count": 1,
+      "rawPct": 16.666666666666664,
+      "pct": "17%",
+      "w": 33
+    },
+    {
+      "name": "Java",
+      "count": 1,
+      "rawPct": 16.666666666666664,
+      "pct": "17%",
+      "w": 33
+    }
+  ],
+  "featured_projects": [
+    {
+      "name": "bime-api",
+      "description": "The official documentation of ..."
+    },
+    {
+      "name": "bime-api-demo",
+      "description": "A rails app that demo the inte..."
+    },
+    {
+      "name": "bime-api-demo-java",
+      "description": "Sample application in JAVA (us..."
+    }
+  ]
+}

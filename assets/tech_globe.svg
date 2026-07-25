@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" fill="none">
+  <defs>
+    <style>
+
+    .globe-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 18px; font-weight: 700; fill: #f8fafc; letter-spacing: 2px; }
+    .globe-sub { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 11px; fill: #64748b; letter-spacing: 1px; }
+    .node-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif; font-size: 11px; font-weight: 700; fill: #f8fafc; text-anchor: middle; }
+    .node-category { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace; font-size: 8px; font-weight: 600; fill: #38bdf8; text-anchor: middle; }
+    
+    @keyframes orbitRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pulseBeam {
+      0%, 100% { stroke-opacity: 0.8; stroke-width: 1.5px; }
+      50% { stroke-opacity: 0.2; stroke-width: 1px; }
+    }
+    .orbit-path { transform-origin: 400px 210px; animation: orbitRotate 40s linear infinite; }
+    .laser-beam { animation: pulseBeam 3s infinite ease-in-out; }
+  
+    </style>
+    
+      <filter id="globe-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur1" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7.2" result="blur2" />
+        <feMerge>
+          <feMergeNode in="blur2" />
+          <feMergeNode in="blur1" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    
+    
+      <filter id="globe-shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#000000" flood-opacity="0.45" />
+      </filter>
+    
+    
+      <pattern id="globe-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+      </pattern>
+    
+    
+      <linearGradient id="globe-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0b1120" />
+        <stop offset="100%" stop-color="#040711" />
+      </linearGradient>
+    
+  </defs>
+  <rect x="10" y="10" width="780" height="380" rx="16" fill="#000000" fill-opacity="0.4" filter="url(#globe-shadow)" />
+  <rect x="10" y="10" width="780" height="380" rx="16" fill="url(#globe-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <path d="M 26 11 L 774 11" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85" />
+  <rect x="10" y="10" width="780" height="380" fill="url(#globe-grid)" rx="16" />
+  <text x="38" y="44" class="globe-title">PLANETARY TECH MATRIX // GLOBAL NEURAL NODES</text>
+  <text x="38" y="62" class="globe-sub">CORE ARCHITECTURAL STACK & INFRASTRUCTURE RINGS</text>
+  <g >
+    <circle cx="400" cy="210" r="64" fill="#0f172a" stroke="#334155" stroke-width="2" />
+    <circle cx="400" cy="210" r="54" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="10 8" />
+    <circle cx="400" cy="210" r="38" fill="#111f38" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="400" cy="210" r="18" fill="#38bdf8" filter="url(#globe-glow)" />
+    <text x="400" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif" font-size="10px" font-weight="800" fill="#0f172a" text-anchor="middle">CORE</text>
+  </g>
+  <g ><line x1="400" y1="210" x2="535" y2="210" stroke="#38bdf8" stroke-width="1.2" class="laser-beam" style="animation-delay: 0s" />
+      <rect x="489" y="192" width="92" height="36" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="535" y="208" class="node-text">TypeScript</text>
+      <text x="535" y="221" class="node-category" fill="#38bdf8">FRONTEND CORE</text>
+    <line x1="400" y1="210" x2="502.5304832720494" y2="283.82194795587554" stroke="#10b981" stroke-width="1.2" class="laser-beam" style="animation-delay: 0.3s" />
+      <rect x="456.5304832720494" y="265.82194795587554" width="92" height="36" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <text x="502.5304832720494" y="281.82194795587554" class="node-text">Node.js</text>
+      <text x="502.5304832720494" y="294.82194795587554" class="node-category" fill="#10b981">BACKEND ENGINE</text>
+    <line x1="400" y1="210" x2="400" y2="303.6" stroke="#fbbf24" stroke-width="1.2" class="laser-beam" style="animation-delay: 0.6s" />
+      <rect x="354" y="285.6" width="92" height="36" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5" />
+      <text x="400" y="301.6" class="node-text">Python</text>
+      <text x="400" y="314.6" class="node-category" fill="#fbbf24">AI & DATA LAB</text>
+    <line x1="400" y1="210" x2="293.93398282201787" y2="286.3675323681471" stroke="#38bdf8" stroke-width="1.2" class="laser-beam" style="animation-delay: 0.8999999999999999s" />
+      <rect x="247.93398282201787" y="268.3675323681471" width="92" height="36" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="293.93398282201787" y="284.3675323681471" class="node-text">Flutter</text>
+      <text x="293.93398282201787" y="297.3675323681471" class="node-category" fill="#38bdf8">MOBILE ARCH</text>
+    <line x1="400" y1="210" x2="265" y2="210" stroke="#60a5fa" stroke-width="1.2" class="laser-beam" style="animation-delay: 1.2s" />
+      <rect x="219" y="192" width="92" height="36" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="1.5" />
+      <text x="265" y="208" class="node-text">Docker</text>
+      <text x="265" y="221" class="node-category" fill="#60a5fa">CONTAINER GRID</text>
+    <line x1="400" y1="210" x2="297.4695167279506" y2="136.17805204412446" stroke="#f97316" stroke-width="1.2" class="laser-beam" style="animation-delay: 1.5s" />
+      <rect x="251.46951672795058" y="118.17805204412446" width="92" height="36" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.5" />
+      <text x="297.4695167279506" y="134.17805204412446" class="node-text">AWS Cloud</text>
+      <text x="297.4695167279506" y="147.17805204412446" class="node-category" fill="#f97316">INFRA MATRIX</text>
+    <line x1="400" y1="210" x2="400" y2="116.4" stroke="#38bdf8" stroke-width="1.2" class="laser-beam" style="animation-delay: 1.7999999999999998s" />
+      <rect x="354" y="98.4" width="92" height="36" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="400" y="114.4" class="node-text">React / Next</text>
+      <text x="400" y="127.4" class="node-category" fill="#38bdf8">WEB PROTOCOL</text>
+    <line x1="400" y1="210" x2="506.0660171779821" y2="133.63246763185285" stroke="#a855f7" stroke-width="1.2" class="laser-beam" style="animation-delay: 2.1s" />
+      <rect x="460.0660171779821" y="115.63246763185285" width="92" height="36" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.5" />
+      <text x="506.0660171779821" y="131.63246763185285" class="node-text">PostgreSQL</text>
+      <text x="506.0660171779821" y="144.63246763185285" class="node-category" fill="#a855f7">DATABASE CORE</text>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Today's Mission",
+    "quote": "Build something that didn't exist yesterday.",
+    "author": "Creative Mind Core",
+    "category": "INNOVATION"
+  },
+  {
+    "id": 2,
+    "title": "Protocol Directive",
+    "quote": "Simplicity is the ultimate sophistication in complex system architecture.",
+    "author": "Neural OS",
+    "category": "ARCHITECTURE"
+  },
+  {
+    "id": 3,
+    "title": "System Directive",
+    "quote": "Code is not just logic; it is living digital art.",
+    "author": "Creative Engine",
+    "category": "CRAFTSMANSHIP"
+  },
+  {
+    "id": 4,
+    "title": "Quantum Objective",
+    "quote": "Automate the ordinary so you can engineer the extraordinary.",
+    "author": "Automation Grid",
+    "category": "EFFICIENCY"
+  },
+  {
+    "id": 5,
+    "title": "Core Philosophy",
+    "quote": "Every commit powers the expansion of the digital universe.",
+    "author": "Energy Reactor",
+    "category": "MOMENTUM"
+  }
+]
