@@ -14,8 +14,8 @@ class SVGBuilder {
     this.styles = [];
     this.elements = [];
 
-    // Timeless, high-contrast, premium typography
-    this.fontUI = `-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', sans-serif`;
+    // The bulletproof modern UI typography stack (GitHub safe)
+    this.fontUI = `system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`;
     
     // Core definition for the ultra-premium aesthetic
     this.addDef(`
