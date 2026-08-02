@@ -46,6 +46,8 @@ function build() {
   const dashboardData = {
     user: githubData.user,
     stats: githubData.stats,
+    languages: githubData.languages,
+    featured_projects: githubData.featured_projects,
     projects: projectsData,
     timeline: timelineData,
     quotes: quotesData

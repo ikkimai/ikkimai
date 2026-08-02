@@ -27,7 +27,7 @@ function renderMasterDashboard(data) {
     @keyframes popInCore { 0% { transform: scale(0.6); opacity: 0; filter: blur(10px); } 60% { transform: scale(1.05); filter: blur(0px); } 100% { transform: scale(1); opacity: 1; } }
     @keyframes drawLines { 0% { opacity: 0; stroke-dasharray: 200; stroke-dashoffset: 200; } 100% { opacity: 1; stroke-dasharray: 200; stroke-dashoffset: 0; } }
     @keyframes ejectNode { 0% { transform: scale(0) translate(0, 0); opacity: 0; } 100% { transform: scale(1) translate(0, 0); opacity: 1; } }
-    @keyframes expandBar { 0% { width: 0; } 100% { width: 100%; } }
+    @keyframes expandBar { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
     @keyframes slideUpData { 0% { transform: translateY(15px) scaleY(0.1); opacity: 0; } 100% { transform: translateY(0) scaleY(1); opacity: 1; } }
     
     /* Physics Animations */
@@ -42,7 +42,7 @@ function renderMasterDashboard(data) {
     .seq-node { opacity: 0; animation: ejectNode 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; transform-origin: center; }
     
     .anim-bar { opacity: 0; transform-origin: bottom; animation: slideUpData 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    .anim-progress { animation: expandBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .anim-progress { transform-origin: left; animation: expandBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
   `);
 
   // Premium Plus Pro Gradient Definitions
