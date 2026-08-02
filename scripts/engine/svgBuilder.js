@@ -15,7 +15,7 @@ class SVGBuilder {
     this.elements = [];
 
     // The bulletproof modern UI typography stack (GitHub safe)
-    this.fontUI = `system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`;
+    this.fontUI = `system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`;
     
     // Core definition for the ultra-premium aesthetic
     this.addDef(`
