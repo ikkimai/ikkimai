@@ -167,8 +167,15 @@ function renderMasterDashboard(data) {
 
   // --- Map Real Languages to Nodes ---
   const fallbackLangs = ["Flutter", "AWS", "Node.js", "Docker", "Python", "Figma", "Postgres"];
-  const realLangs = data?.languages?.length > 0 ? data.languages.map(l => l.name) : fallbackLangs;
-  while(realLangs.length < 7) { realLangs.push("Tech"); }
+  const baseLangs = data?.languages?.length > 0 ? data.languages.map(l => l.name) : fallbackLangs;
+  const realLangs = [...baseLangs];
+  
+  // If user has less than 7 languages, recycle their top languages to fill the orbit!
+  let idx = 0;
+  while(realLangs.length < 7) { 
+    realLangs.push(baseLangs[idx % baseLangs.length]); 
+    idx++;
+  }
 
   const drawNode = (x, y, label, delaySpawn, delayFloat) => `
     <g transform="translate(${x}, ${y})">
@@ -286,8 +293,8 @@ function renderMasterDashboard(data) {
   
   const projCard = (x, title, sub) => `
     <rect x="${x}" y="765" width="105" height="85" rx="8" fill="rgba(255,255,255,0.02)" stroke="url(#node-border)" stroke-width="0.5" />
-    <text x="${x + 12}" y="810" font-family="${svg.fontUI}" font-size="14px" font-weight="500" fill="#fff">${title}</text>
-    <text x="${x + 12}" y="830" class="text-sm" font-size="11px">${sub}</text>
+    <text x="${x + 12}" y="810" font-family="${svg.fontUI}" font-size="14px" font-weight="500" fill="#fff">${title.substring(0, 10)}${title.length > 10 ? '.' : ''}</text>
+    <text x="${x + 12}" y="830" class="text-sm" font-size="10px">${sub ? sub.substring(0, 13) + (sub.length > 13 ? '...' : '') : ''}</text>
   `;
   const projData = data?.featured_projects?.length > 0 ? data.featured_projects : [
     { name: "OS Core", description: "Vector Engine" },
@@ -295,9 +302,14 @@ function renderMasterDashboard(data) {
     { name: "Automation", description: "API Hooks" }
   ];
   
-  svg.addRaw(projCard(HERO_X + 25, projData[0].name.substring(0, 15), projData[0].description));
-  svg.addRaw(projCard(HERO_X + 145, projData[1].name.substring(0, 15), projData[1].description));
-  svg.addRaw(projCard(HERO_X + 265, projData[2].name.substring(0, 15), projData[2].description));
+  // Create safe fallbacks in case user has < 3 projects
+  const p1 = projData[0] || { name: "System", description: "Core Architecture" };
+  const p2 = projData[1] || { name: "Network", description: "Neural pathways" };
+  const p3 = projData[2] || { name: "Interface", description: "User experience" };
+  
+  svg.addRaw(projCard(HERO_X + 25, p1.name, p1.description));
+  svg.addRaw(projCard(HERO_X + 145, p2.name, p2.description));
+  svg.addRaw(projCard(HERO_X + 265, p3.name, p3.description));
 
   // Journey Timeline
   svg.addPremiumCard(HERO_X + 400, 715, RIGHT_X - HERO_X - 420, 155);
