@@ -1,11 +1,7 @@
 # Creative Mind
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/creative_mind_dashboard.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/creative_mind_dashboard.svg">
-    <img alt="Creative Mind OS Master Dashboard" src="assets/creative_mind_dashboard.svg" width="100%">
-  </picture>
+  <img alt="Creative Mind OS Master Dashboard" src="assets/creative_mind_dashboard.svg" width="100%">
 </p>
 
-<!-- Last Rendered: Sat, 25 Jul 2026 17:50:05 GMT -->
+<!-- Last Rendered: Sun, 02 Aug 2026 13:17:13 GMT -->
