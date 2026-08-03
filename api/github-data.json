@@ -1,59 +1,61 @@
 {
   "user": {
-    "login": "nicolas",
-    "name": "Nicolas Raspal",
+    "login": "ikkimai",
+    "name": "ikkimai",
     "bio": "Software Engineer & Designer",
-    "avatar_url": "https://avatars.githubusercontent.com/u/6000?v=4"
+    "avatar_url": "https://avatars.githubusercontent.com/u/181776974?v=4"
   },
   "stats": {
-    "total_commits": 1640,
-    "public_repos": 8,
-    "private_repos_secured": 0,
-    "stars_received": 3,
-    "power_output_mw": null
+    "total_commits": 1928,
+    "public_repos": 3,
+    "private_repos_secured": 8,
+    "stars_received": 0
   },
   "languages": [
     {
-      "name": "Python",
-      "count": 2,
-      "rawPct": 33.33333333333333,
-      "pct": "33%",
-      "w": 67
+      "name": "TypeScript",
+      "count": 4,
+      "rawPct": 36.36363636363637,
+      "pct": "36%",
+      "w": 73
     },
     {
-      "name": "Jupyter Notebook",
-      "count": 2,
-      "rawPct": 33.33333333333333,
-      "pct": "33%",
-      "w": 67
+      "name": "JavaScript",
+      "count": 3,
+      "rawPct": 27.27272727272727,
+      "pct": "27%",
+      "w": 55
     },
     {
-      "name": "Ruby",
+      "name": "HTML",
+      "count": 2,
+      "rawPct": 18.181818181818183,
+      "pct": "18%",
+      "w": 36
+    },
+    {
+      "name": "Dart",
       "count": 1,
-      "rawPct": 16.666666666666664,
-      "pct": "17%",
-      "w": 33
+      "rawPct": 9.090909090909092,
+      "pct": "9%",
+      "w": 18
     },
     {
       "name": "Java",
       "count": 1,
-      "rawPct": 16.666666666666664,
-      "pct": "17%",
-      "w": 33
+      "rawPct": 9.090909090909092,
+      "pct": "9%",
+      "w": 18
     }
   ],
   "featured_projects": [
     {
-      "name": "bime-api",
-      "description": "The official documentation of ..."
+      "name": "Sales-API",
+      "description": "API REST em Spring Boot para g..."
     },
     {
-      "name": "bime-api-demo",
-      "description": "A rails app that demo the inte..."
-    },
-    {
-      "name": "bime-api-demo-java",
-      "description": "Sample application in JAVA (us..."
+      "name": "ytb_down",
+      "description": "Baixar videos e audio"
     }
   ]
 }
