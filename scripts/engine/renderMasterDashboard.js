@@ -145,11 +145,11 @@ function renderMasterDashboard(data) {
       <circle cx="${CORE_CX}" cy="${CORE_CY}" r="${CORE_R * 2.5}" fill="url(#core-glow)" style="mix-blend-mode: screen;" />
       <g>
         ${coreBack}
-        <animateTransform attributeName="transform" type="rotate" from="0 ${CORE_CX} ${CORE_CY}" to="-360 ${CORE_CX} ${CORE_CY}" dur="180s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 ${CORE_CX} ${CORE_CY}" to="-360 ${CORE_CX} ${CORE_CY}" dur="45s" repeatCount="indefinite" />
       </g>
       <g>
         ${coreFront}
-        <animateTransform attributeName="transform" type="rotate" from="0 ${CORE_CX} ${CORE_CY}" to="360 ${CORE_CX} ${CORE_CY}" dur="120s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 ${CORE_CX} ${CORE_CY}" to="360 ${CORE_CX} ${CORE_CY}" dur="30s" repeatCount="indefinite" />
       </g>
     </g>
   `;
@@ -157,11 +157,11 @@ function renderMasterDashboard(data) {
   const rings = `
     <g class="seq-core" style="animation-delay: 0.6s;">
       <ellipse cx="${CORE_CX}" cy="${CORE_CY}" rx="${CORE_R + 80}" ry="${CORE_R + 15}" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5" />
-      <animateTransform attributeName="transform" type="rotate" from="25 ${CORE_CX} ${CORE_CY}" to="385 ${CORE_CX} ${CORE_CY}" dur="120s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="25 ${CORE_CX} ${CORE_CY}" to="385 ${CORE_CX} ${CORE_CY}" dur="35s" repeatCount="indefinite" />
     </g>
     <g class="seq-core" style="animation-delay: 0.7s;">
       <ellipse cx="${CORE_CX}" cy="${CORE_CY}" rx="${CORE_R + 130}" ry="${CORE_R + 35}" fill="none" stroke="rgba(192, 132, 252, 0.15)" stroke-width="1" />
-      <animateTransform attributeName="transform" type="rotate" from="-35 ${CORE_CX} ${CORE_CY}" to="-395 ${CORE_CX} ${CORE_CY}" dur="180s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="-35 ${CORE_CX} ${CORE_CY}" to="-395 ${CORE_CX} ${CORE_CY}" dur="40s" repeatCount="indefinite" />
     </g>
   `;
 
@@ -180,7 +180,8 @@ function renderMasterDashboard(data) {
   const drawNode = (x, y, label, delaySpawn, delayFloat) => `
     <g transform="translate(${x}, ${y})">
       <g class="seq-node" style="animation-delay: ${delaySpawn}s">
-        <g class="tech-node" style="animation-delay: ${delayFloat}s">
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="${3 + Math.random()*2}s" repeatCount="indefinite" />
           <circle cx="0" cy="0" r="34" fill="#0A0A0A" stroke="url(#node-border)" stroke-width="2" />
           <text x="0" y="4" font-family="${svg.fontUI}" font-size="12px" fill="#e2e8f0" text-anchor="middle" font-weight="600">${label.substring(0, 10)}</text>
         </g>
@@ -209,7 +210,9 @@ function renderMasterDashboard(data) {
       <circle cx="${RIGHT_X}" cy="90" r="16" fill="rgba(56, 189, 248, 0.15)" />
       <text x="${RIGHT_X}" y="94" font-family="${svg.fontUI}" font-size="12px" fill="#38bdf8" text-anchor="middle">+</text>
       <text x="${RIGHT_X + 25}" y="86" class="text-sm">System Status</text>
-      <circle cx="${RIGHT_X + 30}" cy="100" r="4" fill="#34d399" style="filter: drop-shadow(0 0 4px #34d399);"/>
+      <circle cx="${RIGHT_X + 30}" cy="100" r="4" fill="#34d399" style="filter: drop-shadow(0 0 4px #34d399);">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+      </circle>
       <text x="${RIGHT_X + 40}" y="103" font-family="${svg.fontUI}" font-size="12px" font-weight="600" fill="#34d399">Online</text>
       
       <text x="${RIGHT_X + 160}" y="86" class="text-sm">Last Updated</text>
