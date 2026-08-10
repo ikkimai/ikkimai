@@ -70,14 +70,17 @@ function renderMasterDashboard(data) {
     </g>
   `);
 
-  svg.addText("WELCOME TO CREATIVE MIND", { x: HERO_X, y: 220, class: "text-card-title seq-reveal", fill: "#38bdf8", style: "animation-delay: 0.2s;" });
-  svg.addText("Building digital", { x: HERO_X, y: 290, class: "text-title seq-reveal", style: "animation-delay: 0.3s;" });
-  svg.addText("experiences", { x: HERO_X, y: 350, class: "text-title seq-reveal", style: "animation-delay: 0.4s;" });
-  svg.addText("that matter.", { x: HERO_X, y: 410, class: "text-title seq-reveal", style: "animation-delay: 0.5s;" });
+  const userName = data?.user?.name || "ikkimai";
+  const userBio = data?.user?.bio || "Software Engineer & Designer";
+
+  svg.addText(userName.toUpperCase(), { x: HERO_X, y: 220, class: "text-card-title seq-reveal", fill: "#38bdf8", style: "animation-delay: 0.2s;" });
+  svg.addText("Fullstack", { x: HERO_X, y: 290, class: "text-title seq-reveal", style: "animation-delay: 0.3s;" });
+  svg.addText("Developer", { x: HERO_X, y: 350, class: "text-title seq-reveal", style: "animation-delay: 0.4s;" });
+  svg.addText("& Engineer.", { x: HERO_X, y: 410, class: "text-title seq-reveal", style: "animation-delay: 0.5s;" });
   
-  svg.addText("I design and engineer digital products,", { x: HERO_X, y: 480, class: "text-subtitle seq-reveal", style: "animation-delay: 0.6s;" });
-  svg.addText("automate workflows and explore", { x: HERO_X, y: 510, class: "text-subtitle seq-reveal", style: "animation-delay: 0.7s;" });
-  svg.addText("intelligent systems.", { x: HERO_X, y: 540, class: "text-subtitle seq-reveal", style: "animation-delay: 0.8s;" });
+  svg.addText(userBio, { x: HERO_X, y: 480, class: "text-subtitle seq-reveal", style: "animation-delay: 0.6s; fill: #e2e8f0;" });
+  svg.addText("Crafting scalable digital products,", { x: HERO_X, y: 510, class: "text-subtitle seq-reveal", style: "animation-delay: 0.7s;" });
+  svg.addText("and automated workflows.", { x: HERO_X, y: 540, class: "text-subtitle seq-reveal", style: "animation-delay: 0.8s;" });
 
   svg.addGroup(`
     <g class="seq-fade-up" style="animation-delay: 1.0s;">
