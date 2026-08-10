@@ -10,6 +10,16 @@ function project3D(x, y, z, fov, viewDist) {
   return { x: x * factor, y: y * factor, scale: factor };
 }
 
+function escapeXML(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function renderMasterDashboard(data) {
   const svg = new SVGBuilder(1440, 900);
 
@@ -70,8 +80,8 @@ function renderMasterDashboard(data) {
     </g>
   `);
 
-  const userName = data?.user?.name || "ikkimai";
-  const userBio = data?.user?.bio || "Software Engineer & Designer";
+  const userName = escapeXML(data?.user?.name || "ikkimai");
+  const userBio = escapeXML(data?.user?.bio || "Software Engineer & Designer");
 
   svg.addText(userName.toUpperCase(), { x: HERO_X, y: 220, class: "text-card-title seq-reveal", fill: "#38bdf8", style: "animation-delay: 0.2s;" });
   svg.addText("Fullstack", { x: HERO_X, y: 290, class: "text-title seq-reveal", style: "animation-delay: 0.3s;" });
@@ -186,7 +196,7 @@ function renderMasterDashboard(data) {
         <g>
           <animateTransform attributeName="transform" type="translate" values="0,0; 0,-12; 0,0" dur="${3 + Math.random()*2}s" repeatCount="indefinite" />
           <circle cx="0" cy="0" r="34" fill="#0A0A0A" stroke="url(#node-border)" stroke-width="2" />
-          <text x="0" y="4" font-family="${svg.fontUI}" font-size="12px" fill="#e2e8f0" text-anchor="middle" font-weight="600">${label.substring(0, 10)}</text>
+          <text x="0" y="4" font-family="${svg.fontUI}" font-size="12px" fill="#e2e8f0" text-anchor="middle" font-weight="600">${escapeXML(label.substring(0, 10))}</text>
         </g>
       </g>
     </g>
@@ -299,8 +309,8 @@ function renderMasterDashboard(data) {
   
   const projCard = (x, title, sub) => `
     <rect x="${x}" y="765" width="105" height="85" rx="8" fill="rgba(255,255,255,0.02)" stroke="url(#node-border)" stroke-width="0.5" />
-    <text x="${x + 12}" y="810" font-family="${svg.fontUI}" font-size="14px" font-weight="500" fill="#fff">${title.substring(0, 10)}${title.length > 10 ? '.' : ''}</text>
-    <text x="${x + 12}" y="830" class="text-sm" font-size="10px">${sub ? sub.substring(0, 13) + (sub.length > 13 ? '...' : '') : ''}</text>
+    <text x="${x + 12}" y="810" font-family="${svg.fontUI}" font-size="14px" font-weight="500" fill="#fff">${escapeXML(title.substring(0, 10))}${title.length > 10 ? '.' : ''}</text>
+    <text x="${x + 12}" y="830" class="text-sm" font-size="10px">${escapeXML(sub ? sub.substring(0, 13) + (sub.length > 13 ? '...' : '') : '')}</text>
   `;
   const projData = data?.featured_projects?.length > 0 ? data.featured_projects : [
     { name: "OS Core", description: "Vector Engine" },
