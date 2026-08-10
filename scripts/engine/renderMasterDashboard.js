@@ -86,7 +86,7 @@ function renderMasterDashboard(data) {
   svg.addText(userName.toUpperCase(), { x: HERO_X, y: 220, class: "text-card-title seq-reveal", fill: "#38bdf8", style: "animation-delay: 0.2s;" });
   svg.addText("Fullstack", { x: HERO_X, y: 290, class: "text-title seq-reveal", style: "animation-delay: 0.3s;" });
   svg.addText("Developer", { x: HERO_X, y: 350, class: "text-title seq-reveal", style: "animation-delay: 0.4s;" });
-  svg.addText("& Engineer.", { x: HERO_X, y: 410, class: "text-title seq-reveal", style: "animation-delay: 0.5s;" });
+  svg.addText("&amp; Engineer.", { x: HERO_X, y: 410, class: "text-title seq-reveal", style: "animation-delay: 0.5s;" });
   
   svg.addText(userBio, { x: HERO_X, y: 480, class: "text-subtitle seq-reveal", style: "animation-delay: 0.6s; fill: #e2e8f0;" });
   svg.addText("Crafting scalable digital products,", { x: HERO_X, y: 510, class: "text-subtitle seq-reveal", style: "animation-delay: 0.7s;" });
