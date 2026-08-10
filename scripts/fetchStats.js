@@ -9,7 +9,7 @@ const https = require("https");
 
 const DATA_PATH = path.join(__dirname, "../api/github-data.json");
 
-const USERNAME = process.env.GITHUB_USER || "Nicolas";
+const USERNAME = process.env.GITHUB_USER || "ikkimai";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.PAT_TOKEN || "";
 
 // Utility to execute HTTP GET requests securely
