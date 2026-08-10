@@ -6,32 +6,46 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/181776974?v=4"
   },
   "stats": {
-    "total_commits": 1568,
+    "total_commits": 1928,
     "public_repos": 3,
-    "private_repos_secured": 0,
+    "private_repos_secured": 8,
     "stars_received": 0
   },
   "languages": [
     {
+      "name": "TypeScript",
+      "count": 4,
+      "rawPct": 36.36363636363637,
+      "pct": "36%",
+      "w": 73
+    },
+    {
       "name": "JavaScript",
+      "count": 3,
+      "rawPct": 27.27272727272727,
+      "pct": "27%",
+      "w": 55
+    },
+    {
+      "name": "HTML",
+      "count": 2,
+      "rawPct": 18.181818181818183,
+      "pct": "18%",
+      "w": 36
+    },
+    {
+      "name": "Dart",
       "count": 1,
-      "rawPct": 33.33333333333333,
-      "pct": "33%",
-      "w": 67
+      "rawPct": 9.090909090909092,
+      "pct": "9%",
+      "w": 18
     },
     {
       "name": "Java",
       "count": 1,
-      "rawPct": 33.33333333333333,
-      "pct": "33%",
-      "w": 67
-    },
-    {
-      "name": "HTML",
-      "count": 1,
-      "rawPct": 33.33333333333333,
-      "pct": "33%",
-      "w": 67
+      "rawPct": 9.090909090909092,
+      "pct": "9%",
+      "w": 18
     }
   ],
   "featured_projects": [
