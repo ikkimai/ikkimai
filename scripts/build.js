@@ -73,7 +73,7 @@ function build() {
   const readmeContent = `# Creative Mind
 
 <p align="center">
-  <img alt="Creative Mind OS Master Dashboard" src="assets/creative_mind_dashboard.svg" width="100%">
+  <img alt="Creative Mind OS Master Dashboard" src="assets/creative_mind_dashboard.svg?v=${Date.now()}" width="100%">
 </p>
 
 <!-- Last Rendered: ${timestamp} -->
