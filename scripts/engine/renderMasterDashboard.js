@@ -216,7 +216,7 @@ function renderMasterDashboard(data) {
   const RIGHT_X = 940;
   
   svg.addRect({ x: RIGHT_X, y: 80, width: 440, height: 760, fill: "url(#panel-bg)", stroke: "#4B3F6B", "stroke-width": 2, rx: 12 });
-  svg.addText("🎒 INVENTORY & EQUIPMENT", { x: RIGHT_X + 30, y: 130, class: "text-section" });
+  svg.addText("🎒 INVENTORY &amp; EQUIPMENT", { x: RIGHT_X + 30, y: 130, class: "text-section" });
   svg.addLine({ x1: RIGHT_X + 30, y1: 150, x2: RIGHT_X + 410, y2: 150, stroke: "rgba(252, 226, 159, 0.2)", "stroke-width": 2 });
 
   const projects = data?.featured_projects || [];
