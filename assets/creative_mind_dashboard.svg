@@ -78,36 +78,36 @@
   </defs>
   <rect x="0" y="0" width="1440" height="900" fill="#030305" />
   <rect x="0" y="0" width="1440" height="900" fill="url(#bg-grad)" />
-  <circle cx="206.57376292916055" cy="571.7614368537979" r="2.753514941681229" fill="#FCE29F" class="particle" style="animation-duration: 13.148497137250391s; animation-delay: -4.8754064660640575s;" opacity="0" />
-<circle cx="1002.6175586142972" cy="544.6752331848883" r="3.9100150225995485" fill="#FCE29F" class="particle" style="animation-duration: 11.923206779795432s; animation-delay: -3.7653044090387606s;" opacity="0" />
-<circle cx="1089.6191634595434" cy="864.7734603952078" r="3.5517127244141573" fill="#FCE29F" class="particle" style="animation-duration: 14.30037112476846s; animation-delay: -0.09682726897906335s;" opacity="0" />
-<circle cx="1262.3383783433821" cy="137.45965338829276" r="1.2748588280089586" fill="#FCE29F" class="particle" style="animation-duration: 14.646196265122292s; animation-delay: -0.4215323647101321s;" opacity="0" />
-<circle cx="948.2121786215407" cy="519.3186980350425" r="1.2502913119770633" fill="#FCE29F" class="particle" style="animation-duration: 10.013554185529301s; animation-delay: -2.910857200714536s;" opacity="0" />
-<circle cx="787.2369494909688" cy="728.7821619901354" r="3.5526499530381903" fill="#FCE29F" class="particle" style="animation-duration: 11.39409744804622s; animation-delay: -4.764210902052794s;" opacity="0" />
-<circle cx="156.904385800272" cy="887.0036199204243" r="2.808492116227364" fill="#FCE29F" class="particle" style="animation-duration: 11.831547987662933s; animation-delay: -4.09483068877303s;" opacity="0" />
-<circle cx="375.13782840861205" cy="444.81391804346123" r="3.0723285472856676" fill="#FCE29F" class="particle" style="animation-duration: 6.235795920421493s; animation-delay: -0.9963772363674733s;" opacity="0" />
-<circle cx="1419.3552846177424" cy="669.8628876541419" r="2.4437935369139767" fill="#FCE29F" class="particle" style="animation-duration: 5.017158269666348s; animation-delay: -1.346696167520482s;" opacity="0" />
-<circle cx="577.6862182983539" cy="284.6118067670954" r="2.963659874428942" fill="#FCE29F" class="particle" style="animation-duration: 9.71325861368615s; animation-delay: -3.217664052563026s;" opacity="0" />
-<circle cx="582.5599592728641" cy="694.2306984352567" r="1.1031652039072848" fill="#FCE29F" class="particle" style="animation-duration: 11.229911044189187s; animation-delay: -3.0735713497809094s;" opacity="0" />
-<circle cx="41.6169011236607" cy="301.5442707651272" r="3.655356757660515" fill="#FCE29F" class="particle" style="animation-duration: 10.99958209086564s; animation-delay: -3.966817073743271s;" opacity="0" />
-<circle cx="1226.0683041244" cy="544.3983662341568" r="2.4850748164798033" fill="#FCE29F" class="particle" style="animation-duration: 11.271577253973643s; animation-delay: -3.583655006508375s;" opacity="0" />
-<circle cx="1328.4164973241363" cy="179.04703695347843" r="1.5684626482544877" fill="#FCE29F" class="particle" style="animation-duration: 6.067860362227968s; animation-delay: -4.050027664129835s;" opacity="0" />
-<circle cx="302.5965869272626" cy="106.74314228688635" r="2.6174001962464226" fill="#FCE29F" class="particle" style="animation-duration: 7.9841575225962345s; animation-delay: -2.392917715226753s;" opacity="0" />
-<circle cx="1390.3261339788435" cy="306.72023875227717" r="1.665223081299208" fill="#FCE29F" class="particle" style="animation-duration: 11.425767981515111s; animation-delay: -3.934949836143974s;" opacity="0" />
-<circle cx="770.0487152451863" cy="306.7524923781294" r="2.597061011733975" fill="#FCE29F" class="particle" style="animation-duration: 10.623250331656429s; animation-delay: -2.8614613908337407s;" opacity="0" />
-<circle cx="701.9373404709539" cy="487.68134797993497" r="1.2578693946457458" fill="#FCE29F" class="particle" style="animation-duration: 12.517129976760327s; animation-delay: -2.8897114226589684s;" opacity="0" />
-<circle cx="1185.927515911452" cy="527.3199832514974" r="2.0388785639756186" fill="#FCE29F" class="particle" style="animation-duration: 9.573493772406518s; animation-delay: -3.126634689169967s;" opacity="0" />
-<circle cx="567.011551871249" cy="725.0242281146716" r="3.9006139123090176" fill="#FCE29F" class="particle" style="animation-duration: 8.239509376788982s; animation-delay: -1.6508167654622659s;" opacity="0" />
-<circle cx="347.10106095985316" cy="485.7001373047475" r="3.04577085044088" fill="#FCE29F" class="particle" style="animation-duration: 5.163612150614689s; animation-delay: -2.9432429281887575s;" opacity="0" />
-<circle cx="321.473465627504" cy="532.347653009081" r="1.2247916801201137" fill="#FCE29F" class="particle" style="animation-duration: 13.207736366479807s; animation-delay: -0.627281594034691s;" opacity="0" />
-<circle cx="507.00095960343265" cy="440.99760917225524" r="1.2758205393938493" fill="#FCE29F" class="particle" style="animation-duration: 5.5148118349099065s; animation-delay: -1.5651436395098062s;" opacity="0" />
-<circle cx="235.63827725343572" cy="674.8350911610887" r="2.5396624022928282" fill="#FCE29F" class="particle" style="animation-duration: 11.652078176177337s; animation-delay: -1.9592733994976586s;" opacity="0" />
-<circle cx="559.7401447892425" cy="215.034021107422" r="3.8059173788527376" fill="#FCE29F" class="particle" style="animation-duration: 5.0898358689209555s; animation-delay: -4.165431988602541s;" opacity="0" />
-<circle cx="590.2982854655198" cy="249.82915605410713" r="2.484504065031607" fill="#FCE29F" class="particle" style="animation-duration: 7.31924344785861s; animation-delay: -2.4012793577295417s;" opacity="0" />
-<circle cx="691.640722013852" cy="714.4881027365477" r="2.397492332046471" fill="#FCE29F" class="particle" style="animation-duration: 6.91101016028973s; animation-delay: -1.9830275377581696s;" opacity="0" />
-<circle cx="1421.2730592501346" cy="274.64005306615536" r="3.7605070334614914" fill="#FCE29F" class="particle" style="animation-duration: 5.077394086582291s; animation-delay: -3.0393740207988236s;" opacity="0" />
-<circle cx="1039.1149182460688" cy="675.8618933619924" r="1.7536371658061176" fill="#FCE29F" class="particle" style="animation-duration: 12.881106370042357s; animation-delay: -3.4201992456252963s;" opacity="0" />
-<circle cx="1066.1012403838615" cy="190.37161411465897" r="2.6569053550177966" fill="#FCE29F" class="particle" style="animation-duration: 7.477883914978064s; animation-delay: -2.836186371810295s;" opacity="0" />
+  <circle cx="368.7182701705119" cy="687.6501946959067" r="2.3215714282498334" fill="#FCE29F" class="particle" style="animation-duration: 8.095348495838667s; animation-delay: -0.7833391983966415s;" opacity="0" />
+<circle cx="68.12989749393809" cy="112.29993399505646" r="1.1328333681248226" fill="#FCE29F" class="particle" style="animation-duration: 9.032602829506882s; animation-delay: -3.219597807019646s;" opacity="0" />
+<circle cx="836.2688840369993" cy="894.6879201345082" r="2.7598781540862984" fill="#FCE29F" class="particle" style="animation-duration: 6.266724206732652s; animation-delay: -3.5025501369499876s;" opacity="0" />
+<circle cx="137.8227217126256" cy="694.3760953491212" r="1.0283858695154677" fill="#FCE29F" class="particle" style="animation-duration: 13.088247120907656s; animation-delay: -2.806962288052249s;" opacity="0" />
+<circle cx="704.4676048823811" cy="893.524461762807" r="1.899167584835176" fill="#FCE29F" class="particle" style="animation-duration: 6.761141551006774s; animation-delay: -0.2957948635818264s;" opacity="0" />
+<circle cx="565.8000656865783" cy="790.9043038815922" r="2.5361405237329686" fill="#FCE29F" class="particle" style="animation-duration: 11.656582301581992s; animation-delay: -4.8144363588903865s;" opacity="0" />
+<circle cx="1049.2993756790145" cy="348.03514617112864" r="2.203645792868345" fill="#FCE29F" class="particle" style="animation-duration: 14.439768606123556s; animation-delay: -4.624266316796827s;" opacity="0" />
+<circle cx="1383.1893382193957" cy="635.0037284527896" r="2.251762701225607" fill="#FCE29F" class="particle" style="animation-duration: 11.968718113002765s; animation-delay: -4.377101791733243s;" opacity="0" />
+<circle cx="778.3705062435787" cy="519.8207781367217" r="2.571401312195887" fill="#FCE29F" class="particle" style="animation-duration: 8.889543282911918s; animation-delay: -4.231028103148143s;" opacity="0" />
+<circle cx="285.76015189144755" cy="270.6360686444549" r="1.4529157173047504" fill="#FCE29F" class="particle" style="animation-duration: 10.537477275337949s; animation-delay: -3.3620029857260247s;" opacity="0" />
+<circle cx="187.0491032045485" cy="539.1737945086487" r="1.5305786736673448" fill="#FCE29F" class="particle" style="animation-duration: 10.746728418492319s; animation-delay: -1.053142872851519s;" opacity="0" />
+<circle cx="537.3023370696246" cy="855.1973923211843" r="2.1532342903322457" fill="#FCE29F" class="particle" style="animation-duration: 5.1843089957883475s; animation-delay: -3.276851030762428s;" opacity="0" />
+<circle cx="1348.3582820679599" cy="535.1192248283758" r="1.351890973593787" fill="#FCE29F" class="particle" style="animation-duration: 6.185361796014134s; animation-delay: -0.019399528287999956s;" opacity="0" />
+<circle cx="977.142743125654" cy="526.6163013128042" r="3.4847619327201267" fill="#FCE29F" class="particle" style="animation-duration: 7.329366687582214s; animation-delay: -2.907612611225545s;" opacity="0" />
+<circle cx="355.8889783990986" cy="182.09187458113234" r="2.1261623871036113" fill="#FCE29F" class="particle" style="animation-duration: 6.67449869448891s; animation-delay: -1.9327468615697208s;" opacity="0" />
+<circle cx="433.6157833955833" cy="400.090819559177" r="2.2605156691351427" fill="#FCE29F" class="particle" style="animation-duration: 8.817891376892893s; animation-delay: -2.126611114484959s;" opacity="0" />
+<circle cx="358.3972318640588" cy="107.71487399295934" r="2.5913398480276726" fill="#FCE29F" class="particle" style="animation-duration: 7.40848507781524s; animation-delay: -0.24233800835092467s;" opacity="0" />
+<circle cx="518.874394741894" cy="156.62958707236527" r="2.6875839952284997" fill="#FCE29F" class="particle" style="animation-duration: 8.692011668417454s; animation-delay: -4.005103715589631s;" opacity="0" />
+<circle cx="753.4839399529068" cy="293.366094348304" r="2.2970625777850717" fill="#FCE29F" class="particle" style="animation-duration: 10.89058491173883s; animation-delay: -0.8929788084994639s;" opacity="0" />
+<circle cx="69.0689361705982" cy="752.7849141903507" r="1.6975495468055573" fill="#FCE29F" class="particle" style="animation-duration: 5.853115314177758s; animation-delay: -1.8192866152559606s;" opacity="0" />
+<circle cx="898.175727305656" cy="694.1950308816378" r="1.569810652766114" fill="#FCE29F" class="particle" style="animation-duration: 14.920553505886675s; animation-delay: -0.24959728513756108s;" opacity="0" />
+<circle cx="1182.9353951933779" cy="430.15725283934125" r="3.060421137444896" fill="#FCE29F" class="particle" style="animation-duration: 14.00873676370154s; animation-delay: -0.5336143498349455s;" opacity="0" />
+<circle cx="623.7965998363917" cy="896.1839241685329" r="3.5975861440582375" fill="#FCE29F" class="particle" style="animation-duration: 13.21473591557662s; animation-delay: -2.188452780040331s;" opacity="0" />
+<circle cx="876.2520603647872" cy="863.5959742866671" r="2.2335769033953246" fill="#FCE29F" class="particle" style="animation-duration: 9.429806380017958s; animation-delay: -0.6293643827480244s;" opacity="0" />
+<circle cx="2.1734591677443937" cy="104.38863085043258" r="2.893989906564765" fill="#FCE29F" class="particle" style="animation-duration: 7.697677491059708s; animation-delay: -3.769284571582098s;" opacity="0" />
+<circle cx="322.64249100623795" cy="703.3034535735601" r="1.3084289608770696" fill="#FCE29F" class="particle" style="animation-duration: 11.483611249343646s; animation-delay: -4.08146167629717s;" opacity="0" />
+<circle cx="1402.1983705800344" cy="680.5663647027816" r="3.150230754149228" fill="#FCE29F" class="particle" style="animation-duration: 14.815785838068388s; animation-delay: -0.23462429693014375s;" opacity="0" />
+<circle cx="59.24978106138363" cy="178.60432851088035" r="2.290808257002487" fill="#FCE29F" class="particle" style="animation-duration: 9.235936531076689s; animation-delay: -3.311080736607389s;" opacity="0" />
+<circle cx="84.35419345820635" cy="390.1773436503534" r="1.0466011714222199" fill="#FCE29F" class="particle" style="animation-duration: 7.774090879341951s; animation-delay: -2.518013576213514s;" opacity="0" />
+<circle cx="0.3774457989639757" cy="108.78472410088014" r="2.170480744791415" fill="#FCE29F" class="particle" style="animation-duration: 9.764773961295779s; animation-delay: -0.2676338508174253s;" opacity="0" />
 
   <rect x="20" y="20" width="1400" height="860" fill="none" stroke="url(#gold-border)" stroke-width="4" rx="12" />
   <rect x="26" y="26" width="1388" height="848" fill="none" stroke="rgba(252, 226, 159, 0.3)" stroke-width="1" rx="8" />
@@ -126,7 +126,7 @@
   
     <g transform="translate(160, 510)">
       <polygon points="50,0 100,25 100,75 50,100 0,75 0,25" fill="url(#panel-bg)" stroke="url(#gold-border)" stroke-width="3" />
-      <text x="50" y="60" class="text-lvl" text-anchor="middle">LV15</text>
+      <text x="50" y="60" class="text-lvl" text-anchor="middle">LV19</text>
     </g>
   
   
@@ -145,9 +145,9 @@
     
       
       <text x="60" y="100" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="18px" font-weight="bold" fill="#E5E5E5">XP (Next Lvl)</text>
-      <text x="320" y="100" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="18px" font-weight="bold" fill="#fff" text-anchor="end">68 / 100</text>
+      <text x="320" y="100" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="18px" font-weight="bold" fill="#fff" text-anchor="end">28 / 100</text>
       <rect x="60" y="110" width="260" height="20" rx="4" fill="#0D0A14" stroke="#4B3F6B" stroke-width="2" />
-      <rect x="62" y="112" width="172.8" height="16" rx="2" fill="url(#xp-grad)" class="anim-bar" />
+      <rect x="62" y="112" width="68.80000000000001" height="16" rx="2" fill="url(#xp-grad)" class="anim-bar" />
     
     </g>
   
@@ -157,12 +157,12 @@
   
     
     <text x="490" y="200" class="text-attr">⚔️ STR (Total Commits)</text>
-    <text x="860" y="200" class="text-val" text-anchor="end">1568</text>
+    <text x="860" y="200" class="text-val" text-anchor="end">1928</text>
     <line x1="490" y1="215" x2="870" y2="215" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="4 4" />
   
     
     <text x="490" y="250" class="text-attr">📖 INT (Languages Known)</text>
-    <text x="860" y="250" class="text-val" text-anchor="end">3</text>
+    <text x="860" y="250" class="text-val" text-anchor="end">5</text>
     <line x1="490" y1="265" x2="870" y2="265" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="4 4" />
   
     
@@ -180,20 +180,30 @@
   <text x="490" y="450" class="text-section">🔮 SKILL TREE</text>
   <line x1="490" y1="470" x2="870" y2="470" stroke="rgba(252, 226, 159, 0.2)" stroke-width="2" />
   
-      <text x="490" y="510" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">JavaScript</text>
-      <text x="870" y="510" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 33</text>
+      <text x="490" y="510" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">TypeScript</text>
+      <text x="870" y="510" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 36</text>
       <rect x="490" y="525" width="380" height="12" rx="6" fill="#0D0A14" />
-      <rect x="490" y="525" width="125.4" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
+      <rect x="490" y="525" width="136.79999999999998" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
     
-      <text x="490" y="580" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">Java</text>
-      <text x="870" y="580" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 33</text>
+      <text x="490" y="580" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">JavaScript</text>
+      <text x="870" y="580" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 27</text>
       <rect x="490" y="595" width="380" height="12" rx="6" fill="#0D0A14" />
-      <rect x="490" y="595" width="125.4" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
+      <rect x="490" y="595" width="102.60000000000001" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
     
       <text x="490" y="650" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">HTML</text>
-      <text x="870" y="650" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 33</text>
+      <text x="870" y="650" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 18</text>
       <rect x="490" y="665" width="380" height="12" rx="6" fill="#0D0A14" />
-      <rect x="490" y="665" width="125.4" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
+      <rect x="490" y="665" width="68.39999999999999" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
+    
+      <text x="490" y="720" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">Dart</text>
+      <text x="870" y="720" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 9</text>
+      <rect x="490" y="735" width="380" height="12" rx="6" fill="#0D0A14" />
+      <rect x="490" y="735" width="34.199999999999996" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
+    
+      <text x="490" y="790" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="20px" font-weight="bold" fill="#E5E5E5">Java</text>
+      <text x="870" y="790" font-family="'Courier New', Courier, monospace, system-ui, sans-serif" font-size="16px" font-weight="bold" fill="#33CCFF" text-anchor="end">Lvl 9</text>
+      <rect x="490" y="805" width="380" height="12" rx="6" fill="#0D0A14" />
+      <rect x="490" y="805" width="34.199999999999996" height="12" rx="6" fill="url(#mp-grad)" class="anim-bar" />
     
   <rect x="940" y="80" width="440" height="760" fill="url(#panel-bg)" stroke="#4B3F6B" stroke-width="2" rx="12" />
   <text x="970" y="130" class="text-section">🎒 INVENTORY & EQUIPMENT</text>
