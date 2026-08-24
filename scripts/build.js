@@ -58,9 +58,9 @@ function build() {
   let svgContent = "";
   try {
     svgContent = renderMasterDashboard(dashboardData);
-    const outputPath = path.join(ASSETS_DIR, "rpg_dashboard.svg");
+    const outputPath = path.join(ASSETS_DIR, "senior_dashboard.svg");
     fs.writeFileSync(outputPath, svgContent, "utf8");
-    console.log(`  [OK] Rendered rpg_dashboard.svg (${(svgContent.length / 1024).toFixed(2)} KB)`);
+    console.log(`  [OK] Rendered senior_dashboard.svg (${(svgContent.length / 1024).toFixed(2)} KB)`);
   } catch (err) {
     console.error(`  [FAIL] Error rendering Master Dashboard:`, err);
     return;
@@ -70,13 +70,18 @@ function build() {
   console.log("[Build] Assembling master README.md...");
   const timestamp = new Date().toUTCString();
   
-  const readmeContent = `# Creative Mind
+  const readmeContent = `# 🚀 Senior Software Engineer Profile
 
 <p align="center">
-  <img alt="Creative Mind OS Master Dashboard" src="assets/rpg_dashboard.svg?v=${Date.now()}" width="100%">
+  <img alt="Senior Engineer Master Dashboard" src="assets/senior_dashboard.svg?v=${Date.now()}" width="100%">
 </p>
 
-<!-- Last Rendered: ${timestamp} -->
+---
+
+<p align="center">
+  <i>Dynamic profile generated automatically by GitHub Actions and a custom Node.js vector graphics engine.</i><br>
+  <i>Last Rendered: ${timestamp}</i>
+</p>
 `;
 
   fs.writeFileSync(README_PATH, readmeContent, "utf8");
