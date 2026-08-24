@@ -58,9 +58,9 @@ function build() {
   let svgContent = "";
   try {
     svgContent = renderMasterDashboard(dashboardData);
-    const outputPath = path.join(ASSETS_DIR, "creative_mind_dashboard.svg");
+    const outputPath = path.join(ASSETS_DIR, "rpg_dashboard.svg");
     fs.writeFileSync(outputPath, svgContent, "utf8");
-    console.log(`  [OK] Rendered creative_mind_dashboard.svg (${(svgContent.length / 1024).toFixed(2)} KB)`);
+    console.log(`  [OK] Rendered rpg_dashboard.svg (${(svgContent.length / 1024).toFixed(2)} KB)`);
   } catch (err) {
     console.error(`  [FAIL] Error rendering Master Dashboard:`, err);
     return;
@@ -73,7 +73,7 @@ function build() {
   const readmeContent = `# Creative Mind
 
 <p align="center">
-  <img alt="Creative Mind OS Master Dashboard" src="assets/creative_mind_dashboard.svg?v=${Date.now()}" width="100%">
+  <img alt="Creative Mind OS Master Dashboard" src="assets/rpg_dashboard.svg?v=${Date.now()}" width="100%">
 </p>
 
 <!-- Last Rendered: ${timestamp} -->
