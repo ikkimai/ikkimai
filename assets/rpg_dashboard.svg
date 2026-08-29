@@ -78,36 +78,36 @@
   </defs>
   <rect x="0" y="0" width="1440" height="900" fill="#030305" />
   <rect x="0" y="0" width="1440" height="900" fill="url(#bg-grad)" />
-  <circle cx="939.8115606297088" cy="872.1418825359492" r="2.725996767135209" fill="#FCE29F" class="particle" style="animation-duration: 11.816439381166287s; animation-delay: -1.287237098738463s;" opacity="0" />
-<circle cx="1398.4826820848432" cy="644.1266147071727" r="2.081110134844198" fill="#FCE29F" class="particle" style="animation-duration: 13.84042747346407s; animation-delay: -3.381723806279777s;" opacity="0" />
-<circle cx="762.9898082721706" cy="230.76248293569284" r="3.8621410200175332" fill="#FCE29F" class="particle" style="animation-duration: 14.270973432327459s; animation-delay: -1.3146033001693846s;" opacity="0" />
-<circle cx="420.06361084997025" cy="525.2396113951283" r="3.095065035587154" fill="#FCE29F" class="particle" style="animation-duration: 9.793525041932307s; animation-delay: -0.40208629543378893s;" opacity="0" />
-<circle cx="756.1446603147825" cy="117.60965263255284" r="2.922849233993858" fill="#FCE29F" class="particle" style="animation-duration: 6.970096322924397s; animation-delay: -4.553516207614714s;" opacity="0" />
-<circle cx="1249.0562474207748" cy="490.4361053816828" r="2.1430933821888187" fill="#FCE29F" class="particle" style="animation-duration: 10.98607959352355s; animation-delay: -1.2744633712807563s;" opacity="0" />
-<circle cx="1015.988747171019" cy="631.6839575732378" r="3.1016025588656992" fill="#FCE29F" class="particle" style="animation-duration: 9.945112950772435s; animation-delay: -3.6236586893766365s;" opacity="0" />
-<circle cx="638.4525569588302" cy="853.9078925866187" r="3.900057125446345" fill="#FCE29F" class="particle" style="animation-duration: 5.997462420208386s; animation-delay: -1.876838539975576s;" opacity="0" />
-<circle cx="1183.9015969016937" cy="169.4272653542953" r="2.816003335715461" fill="#FCE29F" class="particle" style="animation-duration: 8.170865615476972s; animation-delay: -1.4814147353440166s;" opacity="0" />
-<circle cx="400.6345424209629" cy="743.5144189931881" r="1.3723920282062199" fill="#FCE29F" class="particle" style="animation-duration: 11.90859125446831s; animation-delay: -0.4386310126419779s;" opacity="0" />
-<circle cx="911.275065684388" cy="538.6916369517683" r="3.272005534964251" fill="#FCE29F" class="particle" style="animation-duration: 11.992691748350994s; animation-delay: -4.959138964874739s;" opacity="0" />
-<circle cx="131.05699828939106" cy="678.4377410033491" r="2.3824784248315884" fill="#FCE29F" class="particle" style="animation-duration: 10.438880062965122s; animation-delay: -2.697079453681488s;" opacity="0" />
-<circle cx="655.9971644980214" cy="859.0503738917917" r="1.0362539963278643" fill="#FCE29F" class="particle" style="animation-duration: 6.2236415531090605s; animation-delay: -3.214327762761954s;" opacity="0" />
-<circle cx="271.41959849304436" cy="122.13025829832401" r="1.0502475022100286" fill="#FCE29F" class="particle" style="animation-duration: 12.321720981033593s; animation-delay: -4.703134484395768s;" opacity="0" />
-<circle cx="94.0744438704089" cy="620.1737664659083" r="2.8648276914702633" fill="#FCE29F" class="particle" style="animation-duration: 6.2040450029532295s; animation-delay: -2.19341393966598s;" opacity="0" />
-<circle cx="514.5023135237069" cy="626.7743601163545" r="2.290074449880213" fill="#FCE29F" class="particle" style="animation-duration: 5.861328619283679s; animation-delay: -0.2883013869743134s;" opacity="0" />
-<circle cx="1421.9293597537737" cy="139.26649041757102" r="2.3805703598829324" fill="#FCE29F" class="particle" style="animation-duration: 14.050204301909693s; animation-delay: -2.1273231472432297s;" opacity="0" />
-<circle cx="255.5934303878072" cy="517.3310056569446" r="1.0042949886741706" fill="#FCE29F" class="particle" style="animation-duration: 14.714507448492126s; animation-delay: -0.13624488860472517s;" opacity="0" />
-<circle cx="564.890831360171" cy="613.135888661964" r="3.779218141136657" fill="#FCE29F" class="particle" style="animation-duration: 14.568165233016266s; animation-delay: -1.7236103161726901s;" opacity="0" />
-<circle cx="1026.970385108613" cy="811.1088801689779" r="2.568770700266467" fill="#FCE29F" class="particle" style="animation-duration: 5.1124517838001164s; animation-delay: -4.159600929764206s;" opacity="0" />
-<circle cx="146.2861857486212" cy="332.19313796758615" r="1.825426251821068" fill="#FCE29F" class="particle" style="animation-duration: 11.528137527570724s; animation-delay: -4.123472688790085s;" opacity="0" />
-<circle cx="353.9882971665748" cy="341.2434223160247" r="3.1206705968336825" fill="#FCE29F" class="particle" style="animation-duration: 10.527446811406158s; animation-delay: -2.49376909538247s;" opacity="0" />
-<circle cx="651.5233339291987" cy="146.59328556910882" r="2.6195499771753057" fill="#FCE29F" class="particle" style="animation-duration: 10.0879049608771s; animation-delay: -4.15955177635241s;" opacity="0" />
-<circle cx="491.8726742331496" cy="338.8798534767826" r="3.8752110949936696" fill="#FCE29F" class="particle" style="animation-duration: 10.422028544806674s; animation-delay: -1.9995397933632253s;" opacity="0" />
-<circle cx="167.66509029993554" cy="442.874535206216" r="1.5831137621394065" fill="#FCE29F" class="particle" style="animation-duration: 9.957285088351487s; animation-delay: -3.4131001725680408s;" opacity="0" />
-<circle cx="1393.8589935768566" cy="619.2636486696005" r="1.461263941686628" fill="#FCE29F" class="particle" style="animation-duration: 9.903678788487294s; animation-delay: -1.4192399335783967s;" opacity="0" />
-<circle cx="1317.6205223805944" cy="486.7544030169" r="1.2636155591002138" fill="#FCE29F" class="particle" style="animation-duration: 14.820866095071727s; animation-delay: -1.3585636965059589s;" opacity="0" />
-<circle cx="1394.772940993191" cy="258.06002651699913" r="3.8937434678333593" fill="#FCE29F" class="particle" style="animation-duration: 8.343415939844352s; animation-delay: -2.078125349067558s;" opacity="0" />
-<circle cx="72.11652370035686" cy="194.75674364688498" r="3.301380696077241" fill="#FCE29F" class="particle" style="animation-duration: 10.596709649378287s; animation-delay: -0.5043818498219843s;" opacity="0" />
-<circle cx="946.3089600300225" cy="775.2914823579137" r="1.3741414916082486" fill="#FCE29F" class="particle" style="animation-duration: 7.826567365092167s; animation-delay: -1.68867826873779s;" opacity="0" />
+  <circle cx="582.6433771532824" cy="333.85270250801824" r="2.1849635658242867" fill="#FCE29F" class="particle" style="animation-duration: 14.123793571952508s; animation-delay: -4.466799144275971s;" opacity="0" />
+<circle cx="305.9536568439256" cy="550.1986752371479" r="3.9767435832891493" fill="#FCE29F" class="particle" style="animation-duration: 12.99462274986654s; animation-delay: -2.2454901047099463s;" opacity="0" />
+<circle cx="1021.393955493413" cy="777.4335979192027" r="3.9157952966806757" fill="#FCE29F" class="particle" style="animation-duration: 10.233816681059011s; animation-delay: -1.919757200869615s;" opacity="0" />
+<circle cx="583.339605339112" cy="694.2118390857823" r="1.9391585128065039" fill="#FCE29F" class="particle" style="animation-duration: 9.456779491564069s; animation-delay: -3.2554563987486818s;" opacity="0" />
+<circle cx="1086.4714767424716" cy="670.1811619079504" r="3.1269051165006276" fill="#FCE29F" class="particle" style="animation-duration: 8.80441830696194s; animation-delay: -2.7173914742468206s;" opacity="0" />
+<circle cx="157.26824754580474" cy="673.5459474333621" r="2.494645891660939" fill="#FCE29F" class="particle" style="animation-duration: 14.564571663976233s; animation-delay: -0.5677661817844415s;" opacity="0" />
+<circle cx="757.4030288197567" cy="571.0958531009172" r="1.979814624381198" fill="#FCE29F" class="particle" style="animation-duration: 5.017527067956539s; animation-delay: -1.6731280234359835s;" opacity="0" />
+<circle cx="1258.8697024226549" cy="691.9520583156238" r="2.9505817063495288" fill="#FCE29F" class="particle" style="animation-duration: 7.648770030670771s; animation-delay: -3.987958528045241s;" opacity="0" />
+<circle cx="28.463094413845837" cy="262.4868373838815" r="3.2737625683141642" fill="#FCE29F" class="particle" style="animation-duration: 6.650087664739415s; animation-delay: -2.2101972090610458s;" opacity="0" />
+<circle cx="575.8238821903964" cy="178.30515447106416" r="2.4104303219999768" fill="#FCE29F" class="particle" style="animation-duration: 8.081165774294375s; animation-delay: -1.9686855805050996s;" opacity="0" />
+<circle cx="1215.044451017255" cy="860.2166472197356" r="1.4082347288252692" fill="#FCE29F" class="particle" style="animation-duration: 10.742372584421302s; animation-delay: -3.8468047723631105s;" opacity="0" />
+<circle cx="371.1878733570163" cy="643.0427703302939" r="2.150340993991662" fill="#FCE29F" class="particle" style="animation-duration: 7.401819166615073s; animation-delay: -3.1241802885820693s;" opacity="0" />
+<circle cx="172.16532920791477" cy="293.59233253268934" r="1.8063358324367749" fill="#FCE29F" class="particle" style="animation-duration: 7.311002323784217s; animation-delay: -1.9643335245891447s;" opacity="0" />
+<circle cx="59.56494316350071" cy="545.8902242292463" r="1.1888616962484773" fill="#FCE29F" class="particle" style="animation-duration: 14.862534267771924s; animation-delay: -3.265686806578907s;" opacity="0" />
+<circle cx="291.6961798977983" cy="523.2855869874361" r="3.7960027524921327" fill="#FCE29F" class="particle" style="animation-duration: 12.812202787502756s; animation-delay: -2.4293013406788955s;" opacity="0" />
+<circle cx="660.3687529830421" cy="181.20031989620617" r="3.999427643743164" fill="#FCE29F" class="particle" style="animation-duration: 6.96660617513285s; animation-delay: -1.0719966778708434s;" opacity="0" />
+<circle cx="355.7860967379022" cy="267.78337809111645" r="1.820800054321606" fill="#FCE29F" class="particle" style="animation-duration: 7.511048558847568s; animation-delay: -4.372358232790904s;" opacity="0" />
+<circle cx="1220.9529205761573" cy="602.4408005472831" r="3.163610251732732" fill="#FCE29F" class="particle" style="animation-duration: 8.184310541901443s; animation-delay: -2.540861021731091s;" opacity="0" />
+<circle cx="316.9454248371087" cy="620.7580674145337" r="3.4085919830770894" fill="#FCE29F" class="particle" style="animation-duration: 8.595230836172s; animation-delay: -2.836929561469436s;" opacity="0" />
+<circle cx="1006.5580270800508" cy="790.5795094760091" r="2.1189636682780058" fill="#FCE29F" class="particle" style="animation-duration: 11.468734918628769s; animation-delay: -3.8482923804034295s;" opacity="0" />
+<circle cx="1349.6389206831211" cy="219.15073870772056" r="3.667935430633329" fill="#FCE29F" class="particle" style="animation-duration: 9.985315474159915s; animation-delay: -2.5403667198351734s;" opacity="0" />
+<circle cx="278.84516097529934" cy="873.5203996373848" r="3.7942971555521248" fill="#FCE29F" class="particle" style="animation-duration: 13.4971103092941s; animation-delay: -4.086680949622867s;" opacity="0" />
+<circle cx="905.133989673294" cy="546.4591976378962" r="2.7463908426405554" fill="#FCE29F" class="particle" style="animation-duration: 13.276312090533565s; animation-delay: -2.277085898238264s;" opacity="0" />
+<circle cx="227.2114378658714" cy="892.3987036163355" r="3.6999642377201587" fill="#FCE29F" class="particle" style="animation-duration: 5.86322194863733s; animation-delay: -1.5834293547824174s;" opacity="0" />
+<circle cx="1391.9146767443283" cy="769.6012914707" r="2.6534537098088102" fill="#FCE29F" class="particle" style="animation-duration: 13.447081462425473s; animation-delay: -1.3552362105612603s;" opacity="0" />
+<circle cx="320.15149738321645" cy="674.2749014135267" r="2.4659892128092444" fill="#FCE29F" class="particle" style="animation-duration: 13.490702810807452s; animation-delay: -4.168341943776226s;" opacity="0" />
+<circle cx="1377.0143461830557" cy="383.80026648339526" r="1.703651989931868" fill="#FCE29F" class="particle" style="animation-duration: 7.222066364371502s; animation-delay: -3.6242102025991088s;" opacity="0" />
+<circle cx="490.75684613889786" cy="308.04077838998154" r="2.2767280843627606" fill="#FCE29F" class="particle" style="animation-duration: 11.024870520282086s; animation-delay: -0.27743755135862913s;" opacity="0" />
+<circle cx="1028.3017963928792" cy="695.8961510401986" r="2.174850972554819" fill="#FCE29F" class="particle" style="animation-duration: 13.033527244228477s; animation-delay: -2.3313557326433285s;" opacity="0" />
+<circle cx="1282.9393450997675" cy="108.20089050383626" r="2.4767032608759774" fill="#FCE29F" class="particle" style="animation-duration: 6.725223440272492s; animation-delay: -3.133652178441416s;" opacity="0" />
 
   <rect x="20" y="20" width="1400" height="860" fill="none" stroke="url(#gold-border)" stroke-width="4" rx="12" />
   <rect x="26" y="26" width="1388" height="848" fill="none" stroke="rgba(252, 226, 159, 0.3)" stroke-width="1" rx="8" />
