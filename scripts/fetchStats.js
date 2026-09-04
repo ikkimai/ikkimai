@@ -1,7 +1,7 @@
 /**
  * Creative Mind OS - Data Aggregation Engine (`fetchStats.js`)
- * Fetches real-time GitHub user stats, repositories (public and private), and contribution metrics securely.
- * Calculates language distribution and aggregates commit counts for the Master Dashboard without exposing private repo names.
+ * Fetches real-time GitHub user stats securely using the GraphQL API.
+ * Calculates accurate language bytes and exact commit counts.
  */
 const fs = require("fs");
 const path = require("path");
@@ -12,124 +12,155 @@ const DATA_PATH = path.join(__dirname, "../api/github-data.json");
 const USERNAME = process.env.GITHUB_USER || "ikkimai";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.PAT_TOKEN || "";
 
-// Utility to execute HTTP GET requests securely
-function httpsGet(url) {
+// Utility for HTTP requests
+function httpsRequest(options, body) {
   return new Promise((resolve, reject) => {
-    const options = {
-      headers: {
-        "User-Agent": "Creative-Mind-OS-Engine",
-        ...(TOKEN ? { Authorization: `token ${TOKEN}` } : {})
-      }
-    };
-    https.get(url, options, (res) => {
-      let body = "";
-      res.on("data", (chunk) => (body += chunk));
+    const req = https.request(options, (res) => {
+      let data = "";
+      res.on("data", (chunk) => (data += chunk));
       res.on("end", () => {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           try {
-            resolve(JSON.parse(body));
+            resolve(JSON.parse(data));
           } catch (e) {
             reject(e);
           }
         } else {
-          reject(new Error(`GitHub API HTTP ${res.statusCode}: ${body}`));
+          reject(new Error(`GitHub API HTTP ${res.statusCode}: ${data}`));
         }
       });
-    }).on("error", reject);
+    });
+    req.on("error", reject);
+    if (body) req.write(body);
+    req.end();
   });
 }
 
-// REST API approach to fetch repos and aggregate data
+async function fetchGraphQLData() {
+  const query = `
+    query userInfo($login: String!) {
+      user(login: $login) {
+        name
+        login
+        bio
+        avatarUrl
+        contributionsCollection {
+          totalCommitContributions
+          restrictedContributionsCount
+        }
+        repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: {field: STARGAZERS, direction: DESC}) {
+          totalCount
+          nodes {
+            name
+            description
+            stargazerCount
+            isPrivate
+            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+              edges {
+                size
+                node {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const options = {
+    hostname: "api.github.com",
+    path: "/graphql",
+    method: "POST",
+    headers: {
+      "User-Agent": "Creative-Mind-OS-Engine",
+      "Authorization": `Bearer ${TOKEN}`,
+      "Content-Type": "application/json",
+    },
+  };
+
+  const response = await httpsRequest(options, JSON.stringify({ query, variables: { login: USERNAME } }));
+  if (response.errors) {
+    throw new Error(JSON.stringify(response.errors));
+  }
+  return response.data.user;
+}
+
 async function fetchAllData() {
   console.log(`[Fetch Engine] Initiating secure data extraction for user: ${USERNAME}`);
-  
+
   if (!TOKEN) {
-    console.warn("[Warning] GITHUB_TOKEN not found. Fetching public data only with severe rate limits.");
-  } else {
-    console.log("[Fetch Engine] Secure token detected. Aggregating public and private metrics.");
+    console.error("[Error] A GITHUB_TOKEN or PAT_TOKEN is required to fetch accurate GraphQL data. Please set it as an environment variable.");
+    console.log("[Fetch Engine] Using existing mock data as fallback...");
+    return;
   }
 
   try {
-    // 1. Fetch User Data
-    const user = await httpsGet(`https://api.github.com/users/${USERNAME}`);
-    
-    // 2. Fetch Repositories (Iterate pages if necessary, keeping it simple here)
-    // We use /user/repos if token is available to get private ones, else /users/USERNAME/repos
-    const reposUrl = TOKEN ? `https://api.github.com/user/repos?per_page=100&affiliation=owner,collaborator` : `https://api.github.com/users/${USERNAME}/repos?per_page=100`;
-    const repos = await httpsGet(reposUrl);
+    const userData = await fetchGraphQLData();
     
     let totalStars = 0;
     let publicReposCount = 0;
     let privateReposCount = 0;
-    
-    const languageCounts = {};
-    let totalLanguageBytes = 0; // rough proxy via repo presence
-
-    // High-level Featured Projects
+    const languageBytes = {};
+    let totalBytes = 0;
     const featuredProjects = [];
 
-    repos.forEach(repo => {
-      // Metrics aggregation
-      if (repo.private) {
+    userData.repositories.nodes.forEach(repo => {
+      if (repo.isPrivate) {
         privateReposCount++;
       } else {
         publicReposCount++;
-        totalStars += repo.stargazers_count || 0;
+        totalStars += repo.stargazerCount;
         
-        // Pick top 3 public repos for the featured cards
-        if (featuredProjects.length < 3 && !repo.fork && repo.description) {
+        // Add to featured projects if it has a description
+        if (featuredProjects.length < 3 && repo.description) {
           featuredProjects.push({
             name: repo.name,
-            description: repo.description.substring(0, 30) + (repo.description.length > 30 ? "..." : "")
+            description: repo.description.substring(0, 50) + (repo.description.length > 50 ? "..." : "")
           });
         }
       }
 
-      // Language distribution
-      if (repo.language) {
-        languageCounts[repo.language] = (languageCounts[repo.language] || 0) + 1;
-        totalLanguageBytes++;
+      // Aggregate languages
+      if (repo.languages && repo.languages.edges) {
+        repo.languages.edges.forEach(edge => {
+          const langName = edge.node.name;
+          const size = edge.size;
+          languageBytes[langName] = (languageBytes[langName] || 0) + size;
+          totalBytes += size;
+        });
       }
     });
 
-    // Calculate Language Percentages for the Progress Bars
-    const languagesArray = Object.keys(languageCounts)
+    // Calculate accurate language percentages
+    const languagesArray = Object.keys(languageBytes)
       .map(lang => {
-        const count = languageCounts[lang];
-        const rawPct = (count / totalLanguageBytes) * 100;
+        const size = languageBytes[lang];
+        const rawPct = totalBytes > 0 ? (size / totalBytes) * 100 : 0;
         return {
           name: lang,
-          count: count,
+          count: size, // now represents bytes
           rawPct: rawPct,
           pct: `${Math.round(rawPct)}%`,
-          // Calculate width for the SVG bar (max 200px)
           w: Math.round((rawPct / 100) * 200)
         };
       })
       .sort((a, b) => b.count - a.count)
       .slice(0, 5); // Top 5 languages
 
-    // Fallbacks if user has no repos
-    if (featuredProjects.length === 0) {
-      featuredProjects.push({ name: "Creative Mind OS", description: "Ultra-premium dashboard architecture" });
-      featuredProjects.push({ name: "AI Automation Lab", description: "Neural integration systems" });
-      featuredProjects.push({ name: "Mobile Architect", description: "Cross-platform mobile scaling" });
-    }
-
-    // Since REST API doesn't easily give TOTAL lifetime commits without massive iteration,
-    // we use a hybrid approach or simulated baseline if true GraphQL API is not configured.
-    // We fetch public event history as a proxy or use a baseline.
-    const baseCommits = 1532 + (publicReposCount * 12) + (privateReposCount * 45);
+    // True total commits this year (public + private restricted)
+    const totalCommits = userData.contributionsCollection.totalCommitContributions + userData.contributionsCollection.restrictedContributionsCount;
 
     const masterData = {
       user: {
-        login: user.login,
-        name: user.name || user.login,
-        bio: user.bio || "Software Engineer & Designer",
-        avatar_url: user.avatar_url
+        login: userData.login,
+        name: userData.name || userData.login,
+        bio: userData.bio || "Software Engineer & Designer",
+        avatar_url: userData.avatarUrl
       },
       stats: {
-        total_commits: baseCommits, // Approximated
+        total_commits: totalCommits,
         public_repos: publicReposCount,
         private_repos_secured: privateReposCount,
         stars_received: totalStars
@@ -144,8 +175,8 @@ async function fetchAllData() {
     
     fs.writeFileSync(DATA_PATH, JSON.stringify(masterData, null, 2));
     
-    console.log(`[Fetch Engine] Successfully aggregated and secured data for ${user.login}.`);
-    console.log(`[Fetch Engine] Found ${publicReposCount} public and ${privateReposCount} classified private repositories.`);
+    console.log(`[Fetch Engine] Successfully pulled REAL GitHub data for ${userData.login}.`);
+    console.log(`[Fetch Engine] Total Commits: ${totalCommits} | Stars: ${totalStars}`);
     
   } catch (error) {
     console.error("[Fetch Engine] Data retrieval failed:", error.message);
