@@ -47,8 +47,8 @@ function renderMasterDashboard(data) {
     }
 
     @keyframes slide-up {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes bar-fill {
