@@ -3,56 +3,33 @@
   <defs>
     <style>
 
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
     
-    .title { font-size: 28px; font-weight: 700; fill: #F8FAFC; letter-spacing: -0.5px; }
-    .subtitle { font-size: 14px; font-weight: 400; fill: #94A3B8; }
+    .title { font-size: 34px; font-weight: 800; fill: #FFFFFF; letter-spacing: -0.5px; }
+    .subtitle { font-size: 15px; font-weight: 400; fill: #A1A1AA; letter-spacing: 0.5px; }
     
-    .section-title { font-size: 11px; font-weight: 600; fill: #64748B; letter-spacing: 1.5px; text-transform: uppercase; }
+    .section-title { font-size: 10px; font-weight: 700; fill: #52525B; letter-spacing: 3px; text-transform: uppercase; }
     
-    .metric-val { font-size: 32px; font-weight: 700; fill: #F8FAFC; letter-spacing: -1px; }
-    .metric-lbl { font-size: 12px; font-weight: 500; fill: #94A3B8; }
+    .metric-val { font-size: 42px; font-weight: 800; fill: #FFFFFF; letter-spacing: -2px; }
+    .metric-lbl { font-size: 11px; font-weight: 600; fill: #71717A; letter-spacing: 1px; text-transform: uppercase; }
     
-    .code-text { font-size: 13px; fill: #E2E8F0; }
-    .code-comment { font-size: 13px; fill: #64748B; font-style: italic; }
-    .code-keyword { font-size: 13px; fill: #38BDF8; font-weight: 600; }
-    .code-string { font-size: 13px; fill: #10B981; }
+    .tech-name { font-size: 13px; font-weight: 600; fill: #E4E4E7; }
+    .tech-pct { font-size: 12px; font-weight: 500; fill: #71717A; }
 
-    @keyframes typing {
-      from { stroke-dashoffset: 100; }
-      to { stroke-dashoffset: 0; }
-    }
-    
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.8; }
-    }
+    .proj-name { font-size: 16px; font-weight: 700; fill: #FFFFFF; }
+    .proj-desc { font-size: 12px; font-weight: 400; fill: #A1A1AA; }
 
-    @keyframes slide-up {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideRight { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-    @keyframes bar-fill {
-      from { width: 0; }
-      to { } /* End state defined in SVG width attr */
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    @keyframes scanline {
-      0% { transform: translateY(-500px); }
-      100% { transform: translateY(500px); }
-    }
-
-    .anim-slide { animation: slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-    .anim-bar { animation: bar-fill 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    .anim-blink { animation: blink 1.2s infinite step-end; }
-    .anim-glow { animation: pulse-glow 3s infinite alternate; }
+    .fade-in { animation: fade 1.5s ease-in-out forwards; }
+    .bar-grow { stroke-dasharray: 200; stroke-dashoffset: 200; animation: slideRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .blink { animation: blink 1.2s infinite; }
+    .float { animation: float 6s ease-in-out infinite; }
   
     </style>
     
@@ -68,118 +45,154 @@
       </linearGradient>
     
     
+    <!-- Ultra dark pure background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#020617" />
-      <stop offset="100%" stop-color="#0F172A" />
-    </linearGradient>
-    
-    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.5)" />
-      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.5)" />
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="100%" stop-color="#000000" />
     </linearGradient>
 
-    <linearGradient id="primary-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="100%" stop-color="#2563EB" />
+    <!-- Subtle Accent Gradient (Emerald/Cyan style) -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
     </linearGradient>
+
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.15)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+
+    <!-- Drop shadow for the avatar -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
     <clipPath id="avatar-clip">
-      <circle cx="60" cy="60" r="60" />
+      <circle cx="55" cy="55" r="55" />
     </clipPath>
   
   </defs>
   <rect x="0" y="0" width="900" height="450" fill="#030305" />
   <rect x="0" y="0" width="900" height="450" fill="url(#bg)" />
-  <rect x="0" y="0" width="900" height="2" fill="url(#primary-accent)" opacity="0.8" />
-  <line x1="0" y1="0" x2="0" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="30" y1="0" x2="30" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="60" y1="0" x2="60" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="90" y1="0" x2="90" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="120" y1="0" x2="120" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="150" y1="0" x2="150" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="180" y1="0" x2="180" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="210" y1="0" x2="210" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="240" y1="0" x2="240" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="270" y1="0" x2="270" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="300" y1="0" x2="300" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="330" y1="0" x2="330" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="360" y1="0" x2="360" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="390" y1="0" x2="390" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="420" y1="0" x2="420" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="450" y1="0" x2="450" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="480" y1="0" x2="480" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="510" y1="0" x2="510" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="540" y1="0" x2="540" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="570" y1="0" x2="570" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="600" y1="0" x2="600" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="630" y1="0" x2="630" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="660" y1="0" x2="660" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="690" y1="0" x2="690" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="720" y1="0" x2="720" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="750" y1="0" x2="750" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="780" y1="0" x2="780" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="810" y1="0" x2="810" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="840" y1="0" x2="840" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="870" y1="0" x2="870" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="900" y1="0" x2="900" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="0" x2="900" y2="0" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="30" x2="900" y2="30" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="60" x2="900" y2="60" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="90" x2="900" y2="90" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="120" x2="900" y2="120" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="150" x2="900" y2="150" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="180" x2="900" y2="180" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="210" x2="900" y2="210" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="240" x2="900" y2="240" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="270" x2="900" y2="270" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="300" x2="900" y2="300" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="330" x2="900" y2="330" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="360" x2="900" y2="360" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="390" x2="900" y2="390" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="420" x2="900" y2="420" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n<line x1="0" y1="450" x2="900" y2="450" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />\n
+  <line x1="0" y1="0" x2="0" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="45" y1="0" x2="45" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="90" y1="0" x2="90" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="135" y1="0" x2="135" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="180" y1="0" x2="180" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="225" y1="0" x2="225" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="270" y1="0" x2="270" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="315" y1="0" x2="315" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="360" y1="0" x2="360" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="405" y1="0" x2="405" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="450" y1="0" x2="450" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="495" y1="0" x2="495" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="540" y1="0" x2="540" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="585" y1="0" x2="585" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="630" y1="0" x2="630" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="675" y1="0" x2="675" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="720" y1="0" x2="720" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="765" y1="0" x2="765" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="810" y1="0" x2="810" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="855" y1="0" x2="855" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="900" y1="0" x2="900" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="0" x2="900" y2="0" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="45" x2="900" y2="45" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="90" x2="900" y2="90" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="135" x2="900" y2="135" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="180" x2="900" y2="180" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="225" x2="900" y2="225" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="270" x2="900" y2="270" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="315" x2="900" y2="315" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="360" x2="900" y2="360" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="405" x2="900" y2="405" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n<line x1="0" y1="450" x2="900" y2="450" stroke="rgba(255, 255, 255, 0.015)" stroke-width="1" />\n
+  <rect x="1" y="1" width="898" height="448" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <rect x="5" y="5" width="890" height="440" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
   
-    <rect x="0" y="0" width="900" height="20" fill="url(#primary-accent)" opacity="0.03">
-      <animate attributeName="y" values="-20; 470" dur="8s" repeatCount="indefinite" />
-    </rect>
+    <path d="M 14 20 L 26 20 M 20 14 L 20 26" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  
+    <path d="M 874 20 L 886 20 M 880 14 L 880 26" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  
+    <path d="M 14 430 L 26 430 M 20 424 L 20 436" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  
+    <path d="M 874 430 L 886 430 M 880 424 L 880 436" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
   
   
-    <g transform="translate(40, 40)" class="anim-slide" style="animation-delay: 0.1s;">
-      <g clip-path="url(#avatar-clip)" transform="scale(0.8) translate(0,0)">
-        <image href="https://avatars.githubusercontent.com/u/181776974?v=4" width="120" height="120" />
+    <g transform="translate(45, 45)" class="fade-in">
+      <circle cx="55" cy="55" r="58" fill="none" stroke="url(#accent)" stroke-width="1" stroke-dasharray="4 4" style="transform-origin: 55px 55px; animation: rotate 30s linear infinite;" opacity="0.5" />
+      <circle cx="55" cy="55" r="55" fill="#111" filter="url(#shadow)" />
+      <g clip-path="url(#avatar-clip)">
+        <image href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="110" height="110" preserveAspectRatio="xMidYMid slice" />
       </g>
-      <circle cx="48" cy="48" r="49" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
     </g>
   
-  <text x="155" y="75" class="title anim-slide" style="animation-delay: 0.2s;">ikkimai</text>
-  <text x="155" y="100" class="subtitle anim-slide" style="animation-delay: 0.3s;">Software Engineer &amp; Designer</text>
-  <rect x="379" y="88" width="6" height="14" fill="#38BDF8" class="anim-blink" />
+  <text x="180" y="90" class="title fade-in">ikkimai</text>
+  <text x="180" y="115" class="subtitle fade-in">Software Engineer &amp; Designer</text>
+  <rect x="426" y="104" width="8" height="12" fill="#10B981" class="blink" />
+  <line x1="180" y1="140" x2="850" y2="140" stroke="url(#line-grad)" stroke-width="1" class="fade-in" />
   
-    <g transform="translate(40, 150)" class="anim-slide" style="animation-delay: 0.4s;">
-      <rect x="0" y="0" width="200" height="90" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-      <text x="24" y="35" class="section-title">TOTAL COMMITS</text>
-      <text x="24" y="70" class="metric-val">1.928</text>
-    </g>
-  
-  
-    <g transform="translate(260, 150)" class="anim-slide" style="animation-delay: 0.5s;">
-      <rect x="0" y="0" width="200" height="90" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-      <text x="24" y="35" class="section-title">REPOSITORIES</text>
-      <text x="24" y="70" class="metric-val">11</text>
+    <g transform="translate(200, 210)" class="fade-in">
+      <text x="0" y="0" class="metric-val">1.928</text>
+      <text x="2" y="20" class="metric-lbl">Lifetime Commits</text>
+      <circle cx="-15" cy="-12" r="3" fill="#10B981" filter="url(#glow)" opacity="0.6" />
     </g>
   
   
-    <g transform="translate(480, 150)" class="anim-slide" style="animation-delay: 0.6s;">
-      <rect x="0" y="0" width="200" height="90" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-      <text x="24" y="35" class="section-title">STARS EARNED</text>
-      <text x="24" y="70" class="metric-val">0</text>
+    <g transform="translate(440, 210)" class="fade-in">
+      <text x="0" y="0" class="metric-val">11</text>
+      <text x="2" y="20" class="metric-lbl">Total Repositories</text>
+      <circle cx="-15" cy="-12" r="3" fill="#10B981" filter="url(#glow)" opacity="0.6" />
     </g>
   
   
-    <g transform="translate(40, 270)" class="anim-slide" style="animation-delay: 0.7s;">
-      <rect x="0" y="0" width="420" height="150" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-      <text x="24" y="30" class="section-title">CORE TECHNOLOGIES</text>
+    <g transform="translate(680, 210)" class="fade-in">
+      <text x="0" y="0" class="metric-val">0</text>
+      <text x="2" y="20" class="metric-lbl">Stars Earned</text>
+      <circle cx="-15" cy="-12" r="3" fill="#10B981" filter="url(#glow)" opacity="0.6" />
+    </g>
   
+  <text x="45" y="280" class="section-title fade-in">ENGINEERING STACK</text>
   
-      <text x="24" y="63" class="subtitle" style="font-size: 12px; font-weight: 500; fill: #E2E8F0;">TypeScript</text>
-      <text x="396" y="63" class="subtitle" text-anchor="end" style="font-size: 11px;">36%</text>
-      <rect x="120" y="55" width="220" height="4" rx="2" fill="rgba(255,255,255,0.04)" />
-      <rect x="120" y="55" width="80" height="4" rx="2" fill="url(#primary-accent)" class="anim-bar" />
+      <g class="fade-in">
+        <text x="45" y="314" class="tech-name">TypeScript</text>
+        <text x="365" y="314" class="tech-pct" text-anchor="end">36%</text>
+        <!-- Background track -->
+        <line x1="145" y1="310" x2="315" y2="310" stroke="rgba(255,255,255,0.05)" stroke-width="2" stroke-linecap="round" />
+        <!-- Filled track -->
+        <line x1="145" y1="310" x2="206.8181818181818" y2="310" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" class="bar-grow" />
+      </g>
     
-      <text x="24" y="87" class="subtitle" style="font-size: 12px; font-weight: 500; fill: #E2E8F0;">JavaScript</text>
-      <text x="396" y="87" class="subtitle" text-anchor="end" style="font-size: 11px;">27%</text>
-      <rect x="120" y="79" width="220" height="4" rx="2" fill="rgba(255,255,255,0.04)" />
-      <rect x="120" y="79" width="59.99999999999999" height="4" rx="2" fill="url(#primary-accent)" class="anim-bar" />
+      <g class="fade-in">
+        <text x="45" y="346" class="tech-name">JavaScript</text>
+        <text x="365" y="346" class="tech-pct" text-anchor="end">27%</text>
+        <!-- Background track -->
+        <line x1="145" y1="342" x2="315" y2="342" stroke="rgba(255,255,255,0.05)" stroke-width="2" stroke-linecap="round" />
+        <!-- Filled track -->
+        <line x1="145" y1="342" x2="191.36363636363637" y2="342" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" class="bar-grow" />
+      </g>
     
-      <text x="24" y="111" class="subtitle" style="font-size: 12px; font-weight: 500; fill: #E2E8F0;">HTML</text>
-      <text x="396" y="111" class="subtitle" text-anchor="end" style="font-size: 11px;">18%</text>
-      <rect x="120" y="103" width="220" height="4" rx="2" fill="rgba(255,255,255,0.04)" />
-      <rect x="120" y="103" width="40" height="4" rx="2" fill="url(#primary-accent)" class="anim-bar" />
+      <g class="fade-in">
+        <text x="45" y="378" class="tech-name">HTML</text>
+        <text x="365" y="378" class="tech-pct" text-anchor="end">18%</text>
+        <!-- Background track -->
+        <line x1="145" y1="374" x2="315" y2="374" stroke="rgba(255,255,255,0.05)" stroke-width="2" stroke-linecap="round" />
+        <!-- Filled track -->
+        <line x1="145" y1="374" x2="175.9090909090909" y2="374" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" class="bar-grow" />
+      </g>
     
-      <text x="24" y="135" class="subtitle" style="font-size: 12px; font-weight: 500; fill: #E2E8F0;">Dart</text>
-      <text x="396" y="135" class="subtitle" text-anchor="end" style="font-size: 11px;">9%</text>
-      <rect x="120" y="127" width="220" height="4" rx="2" fill="rgba(255,255,255,0.04)" />
-      <rect x="120" y="127" width="20" height="4" rx="2" fill="url(#primary-accent)" class="anim-bar" />
+      <g class="fade-in">
+        <text x="45" y="410" class="tech-name">Dart</text>
+        <text x="365" y="410" class="tech-pct" text-anchor="end">9%</text>
+        <!-- Background track -->
+        <line x1="145" y1="406" x2="315" y2="406" stroke="rgba(255,255,255,0.05)" stroke-width="2" stroke-linecap="round" />
+        <!-- Filled track -->
+        <line x1="145" y1="406" x2="160.45454545454547" y2="406" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" class="bar-grow" />
+      </g>
     
-  </g>
+  <line x1="450" y1="260" x2="450" y2="410" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <text x="500" y="280" class="section-title fade-in">FEATURED ARCHITECTURE</text>
   
-    <g transform="translate(480, 270)" class="anim-slide" style="animation-delay: 0.8s;">
-      <rect x="0" y="0" width="380" height="150" rx="12" fill="#020617" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <g transform="translate(500, 300)" class="fade-in">
+          <!-- Geometric marker -->
+          <rect x="0" y="0" width="12" height="12" fill="none" stroke="#10B981" stroke-width="1" />
+          <rect x="4" y="4" width="4" height="4" fill="#10B981" opacity="0.5" />
+          
+          <text x="25" y="11" class="proj-name">Sales-API</text>
+          <text x="25" y="30" class="proj-desc">API REST em Spring Boot para g...</text>
+        </g>
       
-      <!-- Terminal header -->
-      <rect x="0" y="0" width="380" height="30" fill="rgba(255,255,255,0.02)" />
-      <circle cx="20" cy="15" r="4" fill="#EF4444" opacity="0.8" />
-      <circle cx="36" cy="15" r="4" fill="#F59E0B" opacity="0.8" />
-      <circle cx="52" cy="15" r="4" fill="#10B981" opacity="0.8" />
-      <text x="70" y="19" class="mono" style="font-size: 11px; fill: #64748B;">~/ikkimai/system.ts</text>
+        <g transform="translate(500, 355)" class="fade-in">
+          <!-- Geometric marker -->
+          <rect x="0" y="0" width="12" height="12" fill="none" stroke="#10B981" stroke-width="1" />
+          <rect x="4" y="4" width="4" height="4" fill="#10B981" opacity="0.5" />
+          
+          <text x="25" y="11" class="proj-name">ytb_down</text>
+          <text x="25" y="30" class="proj-desc">Baixar videos e audio</text>
+        </g>
       
-      <!-- Code lines -->
-      <text x="20" y="60" class="mono code-comment">// Initialize core architecture</text>
-      <text x="20" y="80" class="mono code-text"><tspan class="code-keyword">const</tspan> engineer = <tspan class="code-keyword">new</tspan> Developer({</text>
-      <text x="35" y="100" class="mono code-text">status: <tspan class="code-string">"Compiling robust solutions"</tspan>,</text>
-      <text x="35" y="120" class="mono code-text">uptime: <tspan class="code-string">"99.99%"</tspan></text>
-      <text x="20" y="140" class="mono code-text">});</text>
-    </g>
   
-  
-    <g transform="translate(740, 42)" class="anim-slide" style="animation-delay: 0.9s;">
-      <circle cx="0" cy="0" r="4" fill="#10B981" />
-      <circle cx="0" cy="0" r="4" fill="#10B981" class="anim-glow" />
-      <text x="12" y="4" class="mono" style="font-size: 10px; fill: #10B981; letter-spacing: 1px;">ALL SYSTEMS NOMINAL</text>
+    <g transform="translate(730, 45)" class="fade-in">
+      <rect x="0" y="0" width="120" height="24" rx="12" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1" />
+      <circle cx="15" cy="12" r="3" fill="#10B981" class="blink" filter="url(#glow)" />
+      <text x="25" y="16" class="mono" style="font-size: 10px; fill: #10B981; font-weight: 600;">SYSTEM ONLINE</text>
     </g>
   
 </svg>

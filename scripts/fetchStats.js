@@ -87,6 +87,20 @@ async function fetchGraphQLData() {
   return response.data.user;
 }
 
+// Function to fetch and convert image to base64
+async function getBase64Image(url) {
+  return new Promise((resolve) => {
+    https.get(url, (res) => {
+      res.setEncoding('base64');
+      let body = "data:" + res.headers["content-type"] + ";base64,";
+      res.on('data', (data) => { body += data; });
+      res.on('end', () => { resolve(body); });
+    }).on('error', () => {
+      resolve(""); // Return empty string on failure
+    });
+  });
+}
+
 async function fetchAllData() {
   console.log(`[Fetch Engine] Initiating secure data extraction for user: ${USERNAME}`);
 
@@ -98,6 +112,10 @@ async function fetchAllData() {
 
   try {
     const userData = await fetchGraphQLData();
+    
+    // Fetch and base64 encode the avatar so it never breaks in the SVG
+    console.log("[Fetch Engine] Downloading and encoding avatar...");
+    const avatarBase64 = await getBase64Image(userData.avatarUrl);
     
     let totalStars = 0;
     let publicReposCount = 0;
@@ -157,7 +175,7 @@ async function fetchAllData() {
         login: userData.login,
         name: userData.name || userData.login,
         bio: userData.bio || "Software Engineer & Designer",
-        avatar_url: userData.avatarUrl
+        avatar_url: avatarBase64 || userData.avatarUrl
       },
       stats: {
         total_commits: totalCommits,
