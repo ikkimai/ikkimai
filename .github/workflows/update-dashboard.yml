@@ -6,6 +6,9 @@ on:
     - cron: '0 */12 * * *'
   # Allow manual execution from the Actions tab
   workflow_dispatch:
+  # Allow any repo push or deploy to ping this workflow via GitHub API
+  repository_dispatch:
+    types: [deploy, new-project, sync-telemetry]
 
 jobs:
   build:

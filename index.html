@@ -49,8 +49,8 @@
       overflow: auto;
     }
     .dashboard-container {
-      width: 900px;
-      height: 450px;
+      width: 940px;
+      height: 700px;
       background: #000;
       box-shadow: 0 40px 100px rgba(0,0,0,0.8);
       border: 1px solid rgba(255,255,255,0.05);
@@ -96,8 +96,8 @@
   </header>
 
   <main>
-    <div class="dashboard-container">
-      <img src="assets/senior_dashboard.svg" alt="Master Dashboard" id="master-svg" />
+    <div class="dashboard-container" id="svg-host">
+      <img src="assets/senior_dashboard.svg" alt="Master Dashboard" id="master-svg" onerror="loadInlineSvg()" />
     </div>
   </main>
 
@@ -111,10 +111,36 @@
       setTimeout(() => toast.classList.remove("show"), 3000);
     }
 
+    async function loadInlineSvg() {
+      try {
+        const res = await fetch(`assets/senior_dashboard.svg?t=${Date.now()}`);
+        if (res.ok) {
+          const svgText = await res.text();
+          document.getElementById("svg-host").innerHTML = svgText;
+        }
+      } catch (e) {
+        console.warn("Could not inline fetch SVG:", e);
+      }
+    }
+
     function refreshImage() {
       const img = document.getElementById("master-svg");
-      img.src = `assets/senior_dashboard.svg?t=${Date.now()}`;
+      if (img) {
+        img.src = `assets/senior_dashboard.svg?t=${Date.now()}`;
+      } else {
+        loadInlineSvg();
+      }
     }
+
+    // Auto-detect and ensure rendering
+    window.addEventListener("DOMContentLoaded", () => {
+      const img = document.getElementById("master-svg");
+      if (img && !img.complete) {
+        setTimeout(() => {
+          if (img.naturalWidth === 0) loadInlineSvg();
+        }, 300);
+      }
+    });
 
     async function rebuildEngine() {
       try {

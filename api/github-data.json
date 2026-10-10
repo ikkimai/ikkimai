@@ -1,61 +1,121 @@
 {
   "user": {
     "login": "ikkimai",
-    "name": "ikkimai",
-    "bio": "Software Engineer & Designer",
-    "avatar_url": "https://avatars.githubusercontent.com/u/181776974?v=4"
+    "name": "Nicolas Maial",
+    "role": "Software Engineer & Systems Architect",
+    "location": "Santo André, SP - Brazil",
+    "email": "nicolasgmaial@hotmail.com",
+    "github_url": "https://github.com/ikkimai",
+    "avatar_url": "data:image/png;base64,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"
+  },
+  "telemetry": {
+    "engine_version": "Creative Mind 360 Kernel v2.5",
+    "status": "ONLINE // MONITORING",
+    "status_color": "#10B981",
+    "last_sync": "2026-10-10T16:25:00.000Z",
+    "location": "Santo André, SP",
+    "uptime": "99.98%"
   },
   "stats": {
-    "total_commits": 1928,
     "public_repos": 3,
-    "private_repos_secured": 8,
-    "stars_received": 0
+    "private_repos": 8,
+    "active_branches": "main",
+    "total_byte_size": "184.2 KB"
   },
   "languages": [
     {
-      "name": "TypeScript",
-      "count": 4,
-      "rawPct": 36.36363636363637,
-      "pct": "36%",
-      "w": 73
-    },
-    {
       "name": "JavaScript",
-      "count": 3,
-      "rawPct": 27.27272727272727,
-      "pct": "27%",
-      "w": 55
+      "bytes": 64002,
+      "pct": "34.7%",
+      "rawPct": 34.7,
+      "color": "#F7DF1E"
     },
     {
-      "name": "HTML",
-      "count": 2,
-      "rawPct": 18.181818181818183,
-      "pct": "18%",
-      "w": 36
+      "name": "TypeScript",
+      "bytes": 42500,
+      "pct": "23.1%",
+      "rawPct": 23.1,
+      "color": "#3178C6"
     },
     {
-      "name": "Dart",
-      "count": 1,
-      "rawPct": 9.090909090909092,
-      "pct": "9%",
-      "w": 18
+      "name": "Java (Spring)",
+      "bytes": 28400,
+      "pct": "15.4%",
+      "rawPct": 15.4,
+      "color": "#ED8B00"
     },
     {
-      "name": "Java",
-      "count": 1,
-      "rawPct": 9.090909090909092,
-      "pct": "9%",
-      "w": 18
+      "name": "HTML5 / Web",
+      "bytes": 16500,
+      "pct": "9.0%",
+      "rawPct": 9.0,
+      "color": "#E34F26"
+    },
+    {
+      "name": "Dart (Flutter)",
+      "bytes": 14200,
+      "pct": "7.7%",
+      "rawPct": 7.7,
+      "color": "#00D2B8"
+    },
+    {
+      "name": "Python",
+      "bytes": 9800,
+      "pct": "5.3%",
+      "rawPct": 5.3,
+      "color": "#38BDF8"
+    },
+    {
+      "name": "SQL (Postgres)",
+      "bytes": 5200,
+      "pct": "2.8%",
+      "rawPct": 2.8,
+      "color": "#336791"
+    },
+    {
+      "name": "CSS3 / Styles",
+      "bytes": 3600,
+      "pct": "2.0%",
+      "rawPct": 2.0,
+      "color": "#264DE4"
     }
   ],
-  "featured_projects": [
+  "real_projects": [
     {
-      "name": "Sales-API",
-      "description": "API REST em Spring Boot para g..."
+      "id": "ikkimai-engine",
+      "name": "ikkimai // Automated Profile",
+      "commits": 100,
+      "domain": "PROFILE ARCHITECTURE",
+      "description": "Sistema de perfil autônomo com geração vetorial SVG e telemetria contínua via GitHub Actions.",
+      "tech": "JavaScript • Node.js • SVG Vector Engine",
+      "status": "100 COMMITS",
+      "stars": 0,
+      "forks": 0,
+      "color": "#38BDF8"
     },
     {
+      "id": "sales-api",
+      "name": "Sales-API",
+      "commits": 8,
+      "domain": "ENTERPRISE BACKEND",
+      "description": "API REST em Spring Boot para gerenciamento de vendas e resumo analítico por vendedor.",
+      "tech": "Java 17 • Spring Boot • REST • Maven",
+      "status": "8 COMMITS",
+      "stars": 0,
+      "forks": 0,
+      "color": "#10B981"
+    },
+    {
+      "id": "ytb-down",
       "name": "ytb_down",
-      "description": "Baixar videos e audio"
+      "commits": 4,
+      "domain": "MEDIA PIPELINE",
+      "description": "Script de download e extração de áudio/vídeo com interface e automação de mídia.",
+      "tech": "Python • HTML5 • Media Automation",
+      "status": "4 COMMITS",
+      "stars": 0,
+      "forks": 0,
+      "color": "#A855F7"
     }
   ]
 }

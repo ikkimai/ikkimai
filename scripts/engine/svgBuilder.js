@@ -63,7 +63,10 @@ class SVGBuilder {
     if (!attrs) return "";
     return Object.entries(attrs)
       .filter(([_, val]) => val !== undefined && val !== null)
-      .map(([key, val]) => `${key}="${val}"`)
+      .map(([key, val]) => {
+        const svgKey = key.replace(/_/g, "-");
+        return `${svgKey}="${val}"`;
+      })
       .join(" ");
   }
 
