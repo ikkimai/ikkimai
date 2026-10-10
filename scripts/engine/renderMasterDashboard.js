@@ -276,15 +276,18 @@ function renderMasterDashboard(data) {
   // Middle Divider
   svg.addRaw(`<line x1="42" y1="322" x2="898" y2="322" stroke="url(#line-grad)" stroke-width="1" class="fade-in" />`);
 
+  const totalLangs = langs.length;
+  const totalBytesSum = langs.reduce((acc, l) => acc + (l.bytes || 0), 0);
+  const totalBytesKb = (totalBytesSum / 1024).toFixed(1);
+
   // --- SECTION 2: TECH STACK // FULL ECOSYSTEM MATRIX ---
   svg.addText("TECH STACK // FULL ECOSYSTEM MATRIX", { x: 42, y: 346, class: "section-title fade-in" });
-  svg.addText("8 ACTIVE LANGUAGES // CODEBASE BYTES", { x: 898, y: 346, class: "mono", "text-anchor": "end", style: "font-size: 9px; fill: #94A3B8; font-weight: 600;" });
+  svg.addText(`${totalLangs} ACTIVE LANGUAGES // CODEBASE BYTES`, { x: 898, y: 346, class: "mono", "text-anchor": "end", style: "font-size: 9px; fill: #94A3B8; font-weight: 600;" });
 
   // 1. HIGH-IMPACT QUANTUM FUSION REACTOR SPHERE (Left Column)
-  const totalLangs = langs.length;
   const outerSphereRadius = 96;
   const baseRingRadius = 86;
-  const ringStep = 8.4;
+  const ringStep = totalLangs > 0 ? Math.min(8.4, 70 / totalLangs) : 8.4;
 
   let reactorSvg = `
     <g class="fade-in">
@@ -347,8 +350,8 @@ function renderMasterDashboard(data) {
       <circle cx="${rCx}" cy="${rCy}" r="18" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="3 4" class="spin-ring-1" />
 
       <!-- HUD Telemetry Label under Reactor -->
-      <text x="${rCx}" y="${rCy + outerSphereRadius + 20}" class="mono" text-anchor="middle" style="font-size: 8.5px; fill: #38BDF8; font-weight: 700; letter-spacing: 1px;">POLYGLOT REACTOR // 8 CORES</text>
-      <text x="${rCx}" y="${rCy + outerSphereRadius + 32}" class="mono" text-anchor="middle" style="font-size: 7.5px; fill: #64748B;">CODEBASE VOL: 184.4 KB</text>
+      <text x="${rCx}" y="${rCy + outerSphereRadius + 20}" class="mono" text-anchor="middle" style="font-size: 8.5px; fill: #38BDF8; font-weight: 700; letter-spacing: 1px;">POLYGLOT REACTOR // ${totalLangs} CORES</text>
+      <text x="${rCx}" y="${rCy + outerSphereRadius + 32}" class="mono" text-anchor="middle" style="font-size: 7.5px; fill: #64748B;">CODEBASE VOL: ${totalBytesKb} KB</text>
     </g>
   `;
   svg.addRaw(reactorSvg);
