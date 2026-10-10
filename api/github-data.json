@@ -12,7 +12,7 @@
     "engine_version": "Creative Mind 360 Kernel v2.5",
     "status": "ONLINE // MONITORING",
     "status_color": "#10B981",
-    "last_sync": "2026-10-10T21:58:34.627Z",
+    "last_sync": "2026-10-10T22:00:34.579Z",
     "location": "Santo André, SP ",
     "uptime": "99.98%"
   },
@@ -20,63 +20,63 @@
     "public_repos": 3,
     "active_branches": "main",
     "primary_domain": "Backend Systems & Web Engines",
-    "total_byte_size": "108.5 KB"
+    "total_byte_size": "110.0 KB"
   },
   "languages": [
     {
       "name": "JavaScript",
-      "bytes": 74794,
-      "pct": "43.6%",
-      "rawPct": 43.63557868452679,
+      "bytes": 76357,
+      "pct": "44.1%",
+      "rawPct": 44.144904578277036,
       "color": "#F7DF1E"
     },
     {
       "name": "TypeScript",
       "bytes": 42500,
-      "pct": "24.8%",
-      "rawPct": 24.79493133262546,
+      "pct": "24.6%",
+      "rawPct": 24.570876862327932,
       "color": "#3178C6"
     },
     {
       "name": "Dart (Flutter)",
       "bytes": 14200,
-      "pct": "8.3%",
-      "rawPct": 8.284424115841919,
+      "pct": "8.2%",
+      "rawPct": 8.209563563413097,
       "color": "#00D2B8"
     },
     {
       "name": "Java (Spring)",
       "bytes": 14143,
-      "pct": "8.3%",
-      "rawPct": 8.251169737348752,
+      "pct": "8.2%",
+      "rawPct": 8.17660968150362,
       "color": "#ED8B00"
     },
     {
       "name": "HTML5 / Web",
       "bytes": 13205,
-      "pct": "7.7%",
-      "rawPct": 7.703931017583981,
+      "pct": "7.6%",
+      "rawPct": 7.634315975695066,
       "color": "#E34F26"
     },
     {
       "name": "Python",
       "bytes": 5472,
       "pct": "3.2%",
-      "rawPct": 3.1924203353441536,
+      "rawPct": 3.1635726633096106,
       "color": "#38BDF8"
     },
     {
       "name": "SQL (Database)",
       "bytes": 3600,
       "pct": "2.1%",
-      "rawPct": 2.100276536410627,
+      "rawPct": 2.0812978048089543,
       "color": "#336791"
     },
     {
       "name": "Tailwind CSS",
       "bytes": 3492,
       "pct": "2.0%",
-      "rawPct": 2.037268240318309,
+      "rawPct": 2.0188588706646855,
       "color": "#06B6D4"
     }
   ],
