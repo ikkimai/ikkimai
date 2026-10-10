@@ -63,21 +63,6 @@
         animation: spinClockwise 32s linear infinite; 
       }
     
-      .spin-ring-5 { 
-        transform-origin: 165px 495px; 
-        animation: spinCounter 36s linear infinite; 
-      }
-    
-      .spin-ring-6 { 
-        transform-origin: 165px 495px; 
-        animation: spinClockwise 40s linear infinite; 
-      }
-    
-      .spin-ring-7 { 
-        transform-origin: 165px 495px; 
-        animation: spinCounter 44s linear infinite; 
-      }
-    
   
     </style>
     
@@ -365,8 +350,8 @@
     
       <g transform="translate(318, 436)" class="fade-in">
         <!-- Dot + Language Name -->
-        <circle cx="0" cy="4" r="3.5" fill="#3178C6" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">TypeScript</text>
+        <circle cx="0" cy="4" r="3.5" fill="#ED8B00" filter="url(#glow)" />
+        <text x="12" y="8" class="lang-item-name">Java</text>
         
         <!-- Percentage & KB aligned to end of column -->
         <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#3178C6">24.8% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(41.5k)</tspan></text>
