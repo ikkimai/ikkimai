@@ -63,21 +63,6 @@
         animation: spinClockwise 32s linear infinite; 
       }
     
-      .spin-ring-5 { 
-        transform-origin: 165px 495px; 
-        animation: spinCounter 36s linear infinite; 
-      }
-    
-      .spin-ring-6 { 
-        transform-origin: 165px 495px; 
-        animation: spinClockwise 40s linear infinite; 
-      }
-    
-      .spin-ring-7 { 
-        transform-origin: 165px 495px; 
-        animation: spinCounter 44s linear infinite; 
-      }
-    
   
     </style>
     
@@ -216,7 +201,7 @@
   
   <text x="148" y="58" class="title fade-in">Nicolas Maial</text>
   <text x="148" y="80" class="subtitle fade-in">Software Engineer &amp; Systems Architect</text>
-  <text x="148" y="100" class="mono" style="font-size: 11px; fill: #64748B;">📍 Santo André, SP - Brazil</text>
+  <text x="148" y="100" class="mono" style="font-size: 11px; fill: #64748B;">📍 Santo André, SP </text>
   
     <g transform="translate(718, 38)" class="fade-in">
       <rect x="0" y="0" width="180" height="28" rx="14" fill="rgba(16, 185, 129, 0.07)" stroke="rgba(16, 185, 129, 0.28)" stroke-width="1" />
@@ -301,37 +286,25 @@
 
       <!-- Perimeter Scientific Calibrations (24 Ticks around the globe) -->
   <line x1="257.0" y1="495.0" x2="252.0" y2="495.0" stroke="#38BDF8" stroke-width="1.5" /><line x1="253.9" y1="518.8" x2="251.9" y2="518.3" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="244.7" y1="541.0" x2="242.9" y2="540.0" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="230.1" y1="560.1" x2="228.6" y2="558.6" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="211.0" y1="574.7" x2="210.0" y2="572.9" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="188.8" y1="583.9" x2="188.3" y2="581.9" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="165.0" y1="587.0" x2="165.0" y2="582.0" stroke="#38BDF8" stroke-width="1.5" /><line x1="141.2" y1="583.9" x2="141.7" y2="581.9" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="119.0" y1="574.7" x2="120.0" y2="572.9" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="99.9" y1="560.1" x2="101.4" y2="558.6" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="85.3" y1="541.0" x2="87.1" y2="540.0" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="76.1" y1="518.8" x2="78.1" y2="518.3" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="73.0" y1="495.0" x2="78.0" y2="495.0" stroke="#38BDF8" stroke-width="1.5" /><line x1="76.1" y1="471.2" x2="78.1" y2="471.7" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="85.3" y1="449.0" x2="87.1" y2="450.0" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="99.9" y1="429.9" x2="101.4" y2="431.4" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="119.0" y1="415.3" x2="120.0" y2="417.1" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="141.2" y1="406.1" x2="141.7" y2="408.1" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="165.0" y1="403.0" x2="165.0" y2="408.0" stroke="#38BDF8" stroke-width="1.5" /><line x1="188.8" y1="406.1" x2="188.3" y2="408.1" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="211.0" y1="415.3" x2="210.0" y2="417.1" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="230.1" y1="429.9" x2="228.6" y2="431.4" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="244.7" y1="449.0" x2="242.9" y2="450.0" stroke="rgba(255,255,255,0.15)" stroke-width="1" /><line x1="253.9" y1="471.2" x2="251.9" y2="471.7" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
-      <!-- Ring 1: JavaScript (34.7%) -->
+      <!-- Ring 1: JavaScript (67.3%) -->
       <circle cx="165" cy="495" r="86.0" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="4.4" />
-      <circle cx="165" cy="495" r="86.0" fill="none" stroke="#F7DF1E" stroke-width="4.4" stroke-dasharray="187.5 352.9" stroke-linecap="round" class="spin-ring-0" filter="url(#laser-glow)" />
+      <circle cx="165" cy="495" r="86.0" fill="none" stroke="#F7DF1E" stroke-width="4.4" stroke-dasharray="363.8 176.6" stroke-linecap="round" class="spin-ring-0" filter="url(#laser-glow)" />
     
-      <!-- Ring 2: TypeScript (23.1%) -->
+      <!-- Ring 2: Java (12.7%) -->
       <circle cx="165" cy="495" r="77.6" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="4.2" />
-      <circle cx="165" cy="495" r="77.6" fill="none" stroke="#3178C6" stroke-width="4.2" stroke-dasharray="112.6 374.9" stroke-linecap="round" class="spin-ring-1" filter="url(#laser-glow)" />
+      <circle cx="165" cy="495" r="77.6" fill="none" stroke="#ED8B00" stroke-width="4.2" stroke-dasharray="62.1 425.5" stroke-linecap="round" class="spin-ring-1" filter="url(#laser-glow)" />
     
-      <!-- Ring 3: Java (Spring) (15.4%) -->
+      <!-- Ring 3: HTML (11.9%) -->
       <circle cx="165" cy="495" r="69.2" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="4" />
-      <circle cx="165" cy="495" r="69.2" fill="none" stroke="#ED8B00" stroke-width="4" stroke-dasharray="67.0 367.8" stroke-linecap="round" class="spin-ring-2" filter="url(#laser-glow)" />
+      <circle cx="165" cy="495" r="69.2" fill="none" stroke="#E34F26" stroke-width="4" stroke-dasharray="51.7 383.1" stroke-linecap="round" class="spin-ring-2" filter="url(#laser-glow)" />
     
-      <!-- Ring 4: HTML5 / Web (9.0%) -->
+      <!-- Ring 4: Python (4.9%) -->
       <circle cx="165" cy="495" r="60.8" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="3.8000000000000003" />
-      <circle cx="165" cy="495" r="60.8" fill="none" stroke="#E34F26" stroke-width="3.8000000000000003" stroke-dasharray="34.4 347.6" stroke-linecap="round" class="spin-ring-3" filter="url(#laser-glow)" />
+      <circle cx="165" cy="495" r="60.8" fill="none" stroke="#38BDF8" stroke-width="3.8000000000000003" stroke-dasharray="18.8 363.2" stroke-linecap="round" class="spin-ring-3" filter="url(#laser-glow)" />
     
-      <!-- Ring 5: Dart (Flutter) (7.7%) -->
+      <!-- Ring 5: CSS (3.1%) -->
       <circle cx="165" cy="495" r="52.4" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="3.6000000000000005" />
-      <circle cx="165" cy="495" r="52.4" fill="none" stroke="#00D2B8" stroke-width="3.6000000000000005" stroke-dasharray="25.4 303.9" stroke-linecap="round" class="spin-ring-4" filter="url(#laser-glow)" />
-    
-      <!-- Ring 6: Python (5.3%) -->
-      <circle cx="165" cy="495" r="44.0" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="3.4000000000000004" />
-      <circle cx="165" cy="495" r="44.0" fill="none" stroke="#38BDF8" stroke-width="3.4000000000000004" stroke-dasharray="18.0 258.5" stroke-linecap="round" class="spin-ring-5" filter="url(#laser-glow)" />
-    
-      <!-- Ring 7: SQL (Postgres) (2.8%) -->
-      <circle cx="165" cy="495" r="35.6" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="3.2" />
-      <circle cx="165" cy="495" r="35.6" fill="none" stroke="#336791" stroke-width="3.2" stroke-dasharray="18.0 205.7" stroke-linecap="round" class="spin-ring-6" filter="url(#laser-glow)" />
-    
-      <!-- Ring 8: CSS3 / Styles (2.0%) -->
-      <circle cx="165" cy="495" r="27.2" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="3" />
-      <circle cx="165" cy="495" r="27.2" fill="none" stroke="#264DE4" stroke-width="3" stroke-dasharray="18.0 152.9" stroke-linecap="round" class="spin-ring-7" filter="url(#laser-glow)" />
+      <circle cx="165" cy="495" r="52.4" fill="none" stroke="#264DE4" stroke-width="3.6000000000000005" stroke-dasharray="18.0 311.2" stroke-linecap="round" class="spin-ring-4" filter="url(#laser-glow)" />
     
       <!-- Quantum Particle Halo -->
       <circle cx="165" cy="495" r="22" fill="url(#plasma-core)" opacity="0.3" class="core-pulse" />
@@ -354,112 +327,67 @@
         <text x="12" y="8" class="lang-item-name">JavaScript</text>
         
         <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#F7DF1E">34.7% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(62.5k)</tspan></text>
+        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#F7DF1E">67.3% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(73.0k)</tspan></text>
         
         <!-- Background Track -->
         <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
         
         <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="94.7" height="6" rx="3" fill="#F7DF1E" class="bar-grow" />
+        <rect x="0" y="16" width="183.8" height="6" rx="3" fill="#F7DF1E" class="bar-grow" />
       </g>
     
       <g transform="translate(318, 436)" class="fade-in">
         <!-- Dot + Language Name -->
-        <circle cx="0" cy="4" r="3.5" fill="#3178C6" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">TypeScript</text>
+        <circle cx="0" cy="4" r="3.5" fill="#ED8B00" filter="url(#glow)" />
+        <text x="12" y="8" class="lang-item-name">Java</text>
         
         <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#3178C6">23.1% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(41.5k)</tspan></text>
+        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#ED8B00">12.7% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(13.8k)</tspan></text>
         
         <!-- Background Track -->
         <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
         
         <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="63.1" height="6" rx="3" fill="#3178C6" class="bar-grow" />
+        <rect x="0" y="16" width="34.8" height="6" rx="3" fill="#ED8B00" class="bar-grow" />
       </g>
     
       <g transform="translate(318, 500)" class="fade-in">
         <!-- Dot + Language Name -->
-        <circle cx="0" cy="4" r="3.5" fill="#ED8B00" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">Java (Spring)</text>
-        
-        <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#ED8B00">15.4% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(27.7k)</tspan></text>
-        
-        <!-- Background Track -->
-        <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-        
-        <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="42.0" height="6" rx="3" fill="#ED8B00" class="bar-grow" />
-      </g>
-    
-      <g transform="translate(318, 564)" class="fade-in">
-        <!-- Dot + Language Name -->
         <circle cx="0" cy="4" r="3.5" fill="#E34F26" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">HTML5 / Web</text>
+        <text x="12" y="8" class="lang-item-name">HTML</text>
         
         <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#E34F26">9.0% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(16.1k)</tspan></text>
+        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#E34F26">11.9% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(12.9k)</tspan></text>
         
         <!-- Background Track -->
         <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
         
         <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="24.6" height="6" rx="3" fill="#E34F26" class="bar-grow" />
+        <rect x="0" y="16" width="32.4" height="6" rx="3" fill="#E34F26" class="bar-grow" />
       </g>
     
       <g transform="translate(625, 372)" class="fade-in">
-        <!-- Dot + Language Name -->
-        <circle cx="0" cy="4" r="3.5" fill="#00D2B8" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">Dart (Flutter)</text>
-        
-        <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#00D2B8">7.7% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(13.9k)</tspan></text>
-        
-        <!-- Background Track -->
-        <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-        
-        <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="21.0" height="6" rx="3" fill="#00D2B8" class="bar-grow" />
-      </g>
-    
-      <g transform="translate(625, 436)" class="fade-in">
         <!-- Dot + Language Name -->
         <circle cx="0" cy="4" r="3.5" fill="#38BDF8" filter="url(#glow)" />
         <text x="12" y="8" class="lang-item-name">Python</text>
         
         <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#38BDF8">5.3% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(9.6k)</tspan></text>
+        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#38BDF8">4.9% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(5.3k)</tspan></text>
         
         <!-- Background Track -->
         <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
         
         <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="14.5" height="6" rx="3" fill="#38BDF8" class="bar-grow" />
+        <rect x="0" y="16" width="13.4" height="6" rx="3" fill="#38BDF8" class="bar-grow" />
       </g>
     
-      <g transform="translate(625, 500)" class="fade-in">
-        <!-- Dot + Language Name -->
-        <circle cx="0" cy="4" r="3.5" fill="#336791" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">SQL (Postgres)</text>
-        
-        <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#336791">2.8% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(5.1k)</tspan></text>
-        
-        <!-- Background Track -->
-        <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-        
-        <!-- Proportionally Filled Track with Animation and Glow -->
-        <rect x="0" y="16" width="12.0" height="6" rx="3" fill="#336791" class="bar-grow" />
-      </g>
-    
-      <g transform="translate(625, 564)" class="fade-in">
+      <g transform="translate(625, 436)" class="fade-in">
         <!-- Dot + Language Name -->
         <circle cx="0" cy="4" r="3.5" fill="#264DE4" filter="url(#glow)" />
-        <text x="12" y="8" class="lang-item-name">CSS3 / Styles</text>
+        <text x="12" y="8" class="lang-item-name">CSS</text>
         
         <!-- Percentage & KB aligned to end of column -->
-        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#264DE4">2.0% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(3.5k)</tspan></text>
+        <text x="273" y="8" class="mono lang-item-pct" text-anchor="end" fill="#264DE4">3.1% <tspan style="font-size: 9px; fill: #64748B; font-weight: 400;">(3.4k)</tspan></text>
         
         <!-- Background Track -->
         <rect x="0" y="16" width="273" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
