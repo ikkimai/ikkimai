@@ -1,7 +1,7 @@
 # ⚡ Nicolas Maial // Software Engineer & Systems Architect
 
 <p align="center">
-  <img alt="Creative Mind OS 360 Matrix" src="assets/senior_dashboard.svg?v=1794678045010" width="100%">
+  <img alt="Creative Mind OS 360 Matrix" src="assets/senior_dashboard.svg?v=1794678537777" width="100%">
 </p>
 
 <p align="center">
@@ -95,5 +95,5 @@ Software Engineer & Systems Architect based in **Santo André, SP - Brazil**. Fo
 
 <p align="center">
   <i>⚡ Dynamic profile telemetry generated automatically by GitHub Actions and a custom Node.js vector graphics engine.</i><br>
-  <i>Heartbeat Sync: Sat, 14 Nov 2026 17:40:45 GMT</i>
+  <i>Heartbeat Sync: Sat, 14 Nov 2026 17:48:57 GMT</i>
 </p>
